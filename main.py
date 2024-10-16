@@ -13,6 +13,7 @@ def repl():
     
     print("Welcome to the Calculator REPL!")
     print("Type 'exit' to quit, 'history' to see calculation history, or 'menu' for available commands.")
+    print("Available history commands: load_history, save_history, clear_history, delete_history_record <index>.")
 
     while True:
         try:
@@ -30,8 +31,26 @@ def repl():
                     print(f" - {name} (Plugin: {plugin.__class__.__name__})")
                 continue
             
-            # Evaluate user input for arithmetic operations
+            # Handle history management commands
             parts = user_input.split()
+            if parts[0] == "load_history":
+                print(calculator.load_history())
+                continue
+            elif parts[0] == "save_history":
+                print(calculator.save_history())
+                continue
+            elif parts[0] == "clear_history":
+                print(calculator.clear_history())
+                continue
+            elif parts[0] == "delete_history_record":
+                if len(parts) == 2 and parts[1].isdigit():
+                    index = int(parts[1])
+                    print(calculator.delete_history_record(index))
+                else:
+                    print("Error: Please provide a valid index to delete.")
+                continue
+            
+            # Evaluate user input for arithmetic operations
             if len(parts) != 3:
                 print("Invalid input. Please enter: <operation> <num1> <num2>")
                 continue
