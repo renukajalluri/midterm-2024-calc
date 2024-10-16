@@ -1,0 +1,14 @@
+2024-10-16 17:32:13,339 - INFO - Plugin 'ExamplePlugin' registered successfully.
+2024-10-16 17:32:13,339 - INFO - Calculator REPL started.
+2024-10-16 17:32:26,083 - INFO - User input received: menu
+2024-10-16 17:32:52,262 - INFO - User input received: add 1 2
+2024-10-16 17:32:52,264 - INFO - Performing operation: add with numbers: 1.0, 2.0
+2024-10-16 17:32:52,264 - INFO - Added 1.0 + 2.0 = 3.0
+2024-10-16 17:32:52,266 - INFO - Operation result: 3.0
+2024-10-16 17:33:08,954 - INFO - User input received: save_history
+2024-10-16 17:33:08,955 - INFO - Saving history.
+2024-10-16 17:33:08,961 - INFO - History saved to 'calculation_history.csv'.
+2024-10-16 17:33:13,785 - INFO - User input received: load_history
+2024-10-16 17:33:13,785 - INFO - Loading history.
+2024-10-16 17:33:13,788 - INFO - History loaded from 'calculation_history.csv':
+Added 1.0 + 2.0 = 3.0
