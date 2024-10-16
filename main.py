@@ -1,38 +1,19 @@
-class Calculator:
-    def __init__(self):
-        self.history = []
+# File: main.py
 
-    def add(self, a, b):
-        result = a + b
-        self.history.append(f"Added {a} + {b} = {result}")
-        return result
-
-    def subtract(self, a, b):
-        result = a - b
-        self.history.append(f"Subtracted {a} - {b} = {result}")
-        return result
-
-    def multiply(self, a, b):
-        result = a * b
-        self.history.append(f"Multiplied {a} * {b} = {result}")
-        return result
-
-    def divide(self, a, b):
-        if b == 0:
-            raise ValueError("Cannot divide by zero.")
-        result = a / b
-        self.history.append(f"Divided {a} / {b} = {result}")
-        return result
-
-    def show_history(self):
-        return "\n".join(self.history)
-
+from calculator import Calculator
+from plugin import PluginManager
 
 def repl():
+    """Read-Eval-Print Loop for interacting with the calculator."""
     calculator = Calculator()
-    print("Welcome to the Calculator REPL!")
-    print("Type 'exit' to quit or 'history' to see calculation history.")
+    plugin_manager = PluginManager(calculator)
     
+    # Load plugins from the "plugins" directory
+    plugin_manager.load_plugins("plugins")
+    
+    print("Welcome to the Calculator REPL!")
+    print("Type 'exit' to quit, 'history' to see calculation history, or 'menu' for available commands.")
+
     while True:
         try:
             user_input = input("Enter command: ")
@@ -43,8 +24,13 @@ def repl():
                 print("Calculation History:")
                 print(calculator.show_history())
                 continue
+            elif user_input.lower() == 'menu':
+                print("Available commands:")
+                for name, plugin in calculator.list_plugins().items():
+                    print(f" - {name} (Plugin: {plugin.__class__.__name__})")
+                continue
             
-            # Evaluate user input
+            # Evaluate user input for arithmetic operations
             parts = user_input.split()
             if len(parts) != 3:
                 print("Invalid input. Please enter: <operation> <num1> <num2>")
