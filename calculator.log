@@ -20,3 +20,6 @@ Added 1.0 + 2.0 = 3.0
 2024-10-16 17:35:06,816 - INFO - Clearing history.
 2024-10-16 17:35:06,817 - INFO - History cleared.
 2024-10-16 17:35:10,639 - INFO - User input received: menu
+2024-10-16 17:35:23,470 - INFO - User input received: clear_history
+2024-10-16 17:35:23,470 - INFO - Clearing history.
+2024-10-16 17:35:23,471 - INFO - History cleared.
