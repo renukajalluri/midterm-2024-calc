@@ -12,3 +12,11 @@
 2024-10-16 17:33:13,785 - INFO - Loading history.
 2024-10-16 17:33:13,788 - INFO - History loaded from 'calculation_history.csv':
 Added 1.0 + 2.0 = 3.0
+2024-10-16 17:34:15,324 - INFO - User input received: exit
+2024-10-16 17:34:15,325 - INFO - Exiting the calculator.
+2024-10-16 17:35:03,869 - INFO - Plugin 'ExamplePlugin' registered successfully.
+2024-10-16 17:35:03,869 - INFO - Calculator REPL started.
+2024-10-16 17:35:06,816 - INFO - User input received: clear_history
+2024-10-16 17:35:06,816 - INFO - Clearing history.
+2024-10-16 17:35:06,817 - INFO - History cleared.
+2024-10-16 17:35:10,639 - INFO - User input received: menu
