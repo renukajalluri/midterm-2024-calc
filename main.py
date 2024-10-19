@@ -32,7 +32,9 @@ def repl():
 
     while True:
         try:
+            
             user_input = input("Enter command: ")
+            parts = user_input.split()
             logging.info(f"User input received: {user_input}")
             if user_input.lower() == 'exit':
                 logging.info("Exiting the calculator.")
@@ -44,12 +46,17 @@ def repl():
                 continue
             elif user_input.lower() == 'menu':
                 print("Available commands:")
+                print(calculator.list_plugins())
+                
                 for name, plugin in calculator.list_plugins().items():
                     print(f" - {name} (Plugin: {plugin.__class__.__name__})")
                 continue
             
-            # Handle history management commands
-            parts = user_input.split()
+            if parts[0] in calculator.list_plugins().keys():
+                print(parts[1:])
+                calculator.list_plugins()[parts[0]].execute(*parts[1:])
+                            # Handle history management commands
+            
             if parts[0] == "load_history":
                 logging.info("Loading history.")
                 print(calculator.load_history())
@@ -73,10 +80,10 @@ def repl():
                 continue
             
             # Evaluate user input for arithmetic operations
-            if len(parts) != 3:
-                logging.error("Invalid input format.")
-                print("Invalid input. Please enter: <operation> <num1> <num2>")
-                continue
+            # if len(parts) != 3:
+            #     logging.error("Invalid input format.")
+            #     print("Invalid input. Please enter: <operation> <num1> <num2>")
+            #     continue
             
             operation, num1, num2 = parts[0], float(parts[1]), float(parts[2])
             logging.info(f"Performing operation: {operation} with numbers: {num1}, {num2}")
@@ -100,9 +107,9 @@ def repl():
         except ValueError as e:
             logging.error(f"ValueError occurred: {e}")
             print(f"Error: {e}")
-        except Exception as e:
-            logging.error(f"Unexpected error occurred: {e}")
-            print(f"Unexpected error: {e}")
+        # except Exception as e:
+        #     logging.error(f"Unexpected error occurred: {e}")
+        #     print(f"Unexpected error: {e}")
 
 if __name__ == "__main__":
     repl()

@@ -12,10 +12,13 @@ class Calculator:
         self.history = []
         self.plugins = {}
         self.history_file = "calculation_history.csv"  # CSV file for history
+        self.df = pd.DataFrame(self.history, columns=["Calculation"])
+        self.df.to_csv(self.history_file, index=False)
 
     def add(self, a, b):
         result = a + b
         self.history.append(f"Added {a} + {b} = {result}")
+        # self.df.append({"Calculation":f"Added {a} + {b} = {result}"})
         logging.info(f"Added {a} + {b} = {result}")
         return result
 
@@ -46,8 +49,10 @@ class Calculator:
 
     def save_history(self):
         """Save the current history to a CSV file."""
-        df = pd.DataFrame(self.history, columns=["Calculation"])
-        df.to_csv(self.history_file, index=False)
+        # self.df.append(self.history)
+        tmpdf = pd.DataFrame(self.history, columns=["Calculation"])
+        self.df = pd.concat([self.df, tmpdf], ignore_index=True)
+        self.df.to_csv(self.history_file, index=False)
         logging.info(f"History saved to '{self.history_file}'.")
         return f"History saved to '{self.history_file}'."
 
