@@ -3,7 +3,6 @@
 import pandas as pd
 import os
 import logging
-from plugin import Plugin
 
 class Calculator:
     """The main calculator class that performs basic arithmetic operations and manages plugins."""
@@ -84,12 +83,4 @@ class Calculator:
             logging.error("Invalid index provided for deletion.")
             return "Invalid index. No record deleted."
 
-    def register_plugin(self, plugin):
-        """Register a new plugin and its commands."""
-        if isinstance(plugin, Plugin):
-            self.plugins[plugin.__class__.__name__.lower()] = plugin
-            logging.info(f"Plugin '{plugin.__class__.__name__}' registered successfully.")
-
-    def list_plugins(self):
-        """List all available plugin commands."""
-        return self.plugins
+   

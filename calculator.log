@@ -103,3 +103,32 @@ Added 1.0 + 2.0 = 3.0
 2024-10-19 17:29:16,440 - INFO - User input received: save_history
 2024-10-19 17:29:16,440 - INFO - Saving history.
 2024-10-19 17:29:16,477 - INFO - History saved to 'calculation_history.csv'.
+2024-10-20 21:11:02,168 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-20 21:11:02,168 - INFO - Calculator REPL started.
+2024-10-20 21:11:07,693 - INFO - User input received: add 1 2
+2024-10-20 21:12:09,736 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-20 21:12:09,736 - INFO - Calculator REPL started.
+2024-10-20 21:12:12,212 - INFO - User input received: add 1 2
+2024-10-20 21:12:12,213 - INFO - Performing operation: add with numbers: 1.0, 2.0
+2024-10-20 21:12:12,213 - INFO - Added 1.0 + 2.0 = 3.0
+2024-10-20 21:12:12,213 - INFO - Operation result: 3.0
+2024-10-20 21:12:21,096 - INFO - User input received: save_history
+2024-10-20 21:12:21,096 - INFO - Saving history.
+2024-10-20 21:12:21,136 - INFO - History saved to 'calculation_history.csv'.
+2024-10-20 21:40:32,993 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-20 21:40:43,354 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-20 21:40:43,369 - INFO - Application started. Type 'exit' to exit.
+2024-10-20 21:41:22,947 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-20 21:41:22,947 - INFO - Application started. Type 'exit' to exit.
+2024-10-20 21:41:25,515 - INFO - Added 1 + 2 = 12
+2024-10-20 21:43:53,979 - INFO - Application exit.
+2024-10-20 21:43:57,380 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-20 21:43:57,380 - INFO - Application started. Type 'exit' to exit.
+2024-10-20 21:45:26,175 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-20 21:45:26,175 - INFO - Application started. Type 'exit' to exit.
+2024-10-20 21:45:47,989 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-20 21:45:47,989 - INFO - Application started. Type 'exit' to exit.
+2024-10-20 21:54:57,646 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-20 21:54:57,646 - INFO - Application started. Type 'exit' to exit.
+2024-10-20 21:57:46,576 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-20 21:57:46,576 - INFO - Application started. Type 'exit' to exit.
