@@ -1,7 +1,3 @@
-# File: plugins/example_plugin.py
-
-
-
 from commands import Command
 
 class GreetPlugin(Command):

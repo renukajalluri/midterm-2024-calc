@@ -9,14 +9,14 @@ class Command:
         """Execute the plugin command with given arguments."""
         raise NotImplementedError("Plugin must implement the execute method.")
 
-class CommandHandlerSingleton:
+class CommandHandler:
     """Singleton class to manage loading plugins dynamically."""
     _instance = None
 
     def __new__(cls):
         """Override the __new__ method to ensure only one instance of the class."""
         if cls._instance is None:
-            cls._instance = super(CommandHandlerSingleton, cls).__new__(cls)
+            cls._instance = super(CommandHandler, cls).__new__(cls)
             cls._instance.commands = {}
         return cls._instance
 
