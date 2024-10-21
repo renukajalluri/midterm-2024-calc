@@ -40,25 +40,25 @@ class CommandHandler:
         """Dynamically load plugins from the specified directory."""
         for filename in os.listdir(plugins_directory):
             if filename.endswith(".py") and not filename.startswith("_"):
-                module_name = filename[:-3]
+                module_name = filename[:-3] # removed .py which is of 3 characters
                 module = importlib.import_module(f"plugins.{module_name}")
-
                 # Register each class that inherits from Command
                 for name, cls in inspect.getmembers(module, inspect.isclass):
                     if issubclass(cls, Command) and cls is not Command:
+                        # used to identify the arguments
                         signature = inspect.signature(cls.execute)
                         arguments = signature.parameters.values()
-                        self.register_plugin(cls(), list(arguments))
+                      
+                        self.register_plugin(cls.command_name,cls(), list(arguments))
 
-    def register_plugin(self, plugin, arguments):
+    def register_plugin(self,commandname,plugin, arguments):
         """Register a new plugin and its commands."""
         if isinstance(plugin, Command):
             logging.info(f"Plugin '{plugin.__class__.__name__}' registered successfully.")
             if len(arguments) > 1:
-                self.commands[plugin.__class__.__name__.lower()] = [plugin.__class__.__name__.lower(), f"No of Arguments is {len(arguments) - 1} & Arguments are {arguments[1:]}"]
+                self.commands[commandname] = [plugin, f"No of Arguments is {len(arguments) - 1} & Arguments are {arguments[1:]}"]
             else:
-                self.commands[plugin.__class__.__name__.lower()] = [plugin.__class__.__name__.lower(), f"No of Arguments is {len(arguments) - 1}"]
-            
+                self.commands[commandname] = [plugin, f"No of Arguments is {len(arguments) - 1}"]
 
     def list_plugins(self):
         """List all available plugin commands."""

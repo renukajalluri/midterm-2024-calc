@@ -6,9 +6,10 @@ import sys
 
 from dotenv import load_dotenv
 
+load_dotenv()
 # Configure logging
-LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO').upper()  # Default to INFO if not set
-LOG_FILE = os.getenv('LOG_FILE', 'calculator.log')  # Default log file name
+LOG_LEVEL = os.getenv('LOG_LEVEL').upper()  # Default to INFO if not set
+LOG_FILE = os.getenv('LOG_FILE')  # Default log file name
 
 logging.basicConfig(
     level=LOG_LEVEL,
@@ -124,13 +125,10 @@ class App:
                         logging.error(f"Error executing command '{operation}': {e}")
                         print(f"Error: Failed to execute '{operation}'. {e}")
 
-                if operation not in self.commandHandler.list_plugins() +  ['add', 'subtract', 'multiply', 'divide']: 
+                if operation not in self.commandHandler.list_plugins() +  ['add', 'subtract', 'multiply', 'divide',"menu"]: 
 
                     print("command not found")
-                # else:
-                #     logging.error(f"Unknown command: {operation}")
-                #     print(f"Error: Unknown command '{operation}'.")
-
+               
             except Exception as e:
                 logging.error(f"An unexpected error occurred: {e}")
                 print(f"Error: An unexpected error occurred: {e}")

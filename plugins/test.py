@@ -2,6 +2,10 @@ from commands import Command
 
 class Test(Command):
     """An example plugin that provides additional functionality."""
-    def execute(self):
+    command_name = "test"
+    
+
+    @staticmethod
+    def execute():
         print("testing")
        

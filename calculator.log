@@ -204,3 +204,68 @@ Added 1.0 + 2.0 = 3.0
 2024-10-21 12:52:12,514 - INFO - Plugin 'Test' registered successfully.
 2024-10-21 12:52:12,514 - INFO - Calculator REPL started.
 2024-10-21 12:52:12,514 - INFO - Type 'exit' to exit.
+2024-10-21 13:29:42,606 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 13:29:42,621 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 13:29:42,621 - INFO - Calculator REPL started.
+2024-10-21 13:29:42,621 - INFO - Type 'exit' to exit.
+2024-10-21 13:30:53,986 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 13:30:53,986 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 13:30:53,986 - INFO - Calculator REPL started.
+2024-10-21 13:30:53,986 - INFO - Type 'exit' to exit.
+2024-10-21 13:30:59,182 - ERROR - Error executing command 'greet': 'str' object has no attribute 'execute'
+2024-10-21 13:33:03,238 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 13:33:03,238 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 13:33:03,254 - INFO - Calculator REPL started.
+2024-10-21 13:33:03,254 - INFO - Type 'exit' to exit.
+2024-10-21 13:34:02,126 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 13:34:02,126 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 13:34:02,126 - INFO - Calculator REPL started.
+2024-10-21 13:34:02,126 - INFO - Type 'exit' to exit.
+2024-10-21 13:34:13,734 - ERROR - Error executing command 'greet': GreetPlugin.execute() missing 2 required positional arguments: 'arg1' and 'arg2'
+2024-10-21 13:35:56,980 - INFO - Exiting the calculator.
+2024-10-21 13:35:59,180 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 13:35:59,180 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 13:35:59,180 - INFO - Calculator REPL started.
+2024-10-21 13:35:59,180 - INFO - Type 'exit' to exit.
+2024-10-21 13:36:06,533 - INFO - Saving history.
+2024-10-21 13:36:06,533 - INFO - History saved to 'calculation_history.csv'.
+2024-10-21 13:36:11,465 - INFO - Loading history.
+2024-10-21 13:36:11,465 - INFO - History loaded from 'calculation_history.csv'.
+2024-10-21 13:37:31,116 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 13:37:31,116 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 13:37:31,116 - INFO - Calculator REPL started.
+2024-10-21 13:37:31,116 - INFO - Type 'exit' to exit.
+2024-10-21 13:37:33,709 - INFO - Loading history.
+2024-10-21 13:37:33,711 - INFO - History loaded from 'calculation_history.csv'.
+2024-10-21 13:37:35,997 - INFO - Saving history.
+2024-10-21 13:37:35,997 - INFO - History saved to 'calculation_history.csv'.
+2024-10-21 13:39:42,911 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 13:39:42,911 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 13:39:42,911 - INFO - Calculator REPL started.
+2024-10-21 13:39:42,911 - INFO - Type 'exit' to exit.
+2024-10-21 13:40:18,945 - INFO - Saving history.
+2024-10-21 13:40:18,959 - INFO - History saved to 'calculation_history.csv'.
+2024-10-21 13:40:21,828 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 13:40:21,828 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 13:40:21,828 - INFO - Calculator REPL started.
+2024-10-21 13:40:21,828 - INFO - Type 'exit' to exit.
+2024-10-21 13:41:54,429 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 13:41:54,429 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 13:41:54,429 - INFO - Calculator REPL started.
+2024-10-21 13:41:54,429 - INFO - Type 'exit' to exit.
+2024-10-21 13:43:42,144 - INFO - Calculator REPL started.
+2024-10-21 13:43:42,144 - INFO - Type 'exit' to exit.
+2024-10-21 13:44:30,468 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 13:44:30,468 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 13:44:30,468 - INFO - Calculator REPL started.
+2024-10-21 13:44:30,468 - INFO - Type 'exit' to exit.
+2024-10-21 13:44:34,746 - ERROR - Error executing command 'greet': GreetPlugin.execute() missing 1 required positional argument: 'arg2'
+2024-10-21 13:45:07,898 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 13:45:07,898 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 13:45:07,898 - INFO - Calculator REPL started.
+2024-10-21 13:45:07,898 - INFO - Type 'exit' to exit.
+2024-10-21 13:47:50,102 - INFO - Exiting the calculator.
+2024-10-21 13:54:04,872 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 13:54:04,872 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 13:54:04,872 - INFO - Calculator REPL started.
+2024-10-21 13:54:04,872 - INFO - Type 'exit' to exit.
