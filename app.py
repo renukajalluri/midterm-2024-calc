@@ -1,8 +1,10 @@
 import logging
 import os
-from calculator import Calculator
+from calculator.calculator import Calculator
 from commands import CommandHandler
 import sys
+
+from dotenv import load_dotenv
 
 # Configure logging
 LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO').upper()  # Default to INFO if not set
@@ -19,16 +21,20 @@ logging.basicConfig(
 
 
 class App:
-    def start(self):
-        calculator = Calculator()
-        commandHandler = CommandHandler()
-        commandHandler.load_plugins("plugins")
-        print(commandHandler.commands)
-        logging.info("Application started. Type 'exit' to exit.")
 
-        while True:
+    def __init__(self):
+        self.calculator = Calculator()
+        self.commandHandler = CommandHandler()
+
+    def environment_variables(self):
+        pass
+    def repl(self):
+         while True:
             try:
                 cmd_input = input(">>> ").strip()
+
+                
+
                 if cmd_input.lower() == 'exit':
                     logging.info("Exiting the calculator.")
                     print("Exiting the calculator.")
@@ -36,22 +42,22 @@ class App:
 
                 if cmd_input.lower() == 'history':
                     print("Calculation History:")
-                    print(calculator.show_history())
+                    print(self.calculator.show_history())
                     break
                 
                 if cmd_input.lower() == 'load_history':
                     logging.info("Loading history.")
-                    print(calculator.load_history())
+                    print(self.calculator.load_history())
                     continue
 
                 elif cmd_input.lower() == "save_history":
                     logging.info("Saving history.")
-                    print(calculator.save_history())
+                    print(self.calculator.save_history())
                     continue
 
                 elif cmd_input.lower() == "clear_history":
                  logging.info("Clearing history.")
-                 print(calculator.clear_history())
+                 print(self.calculator.clear_history())
                  continue
 
                 elif cmd_input.startswith("delete_history_record"):
@@ -60,7 +66,7 @@ class App:
                     if len(cmd_parts) == 2 and cmd_parts[1].isdigit():
                         index = int(cmd_parts[1])
                         logging.info(f"Deleting history record at index: {index}")
-                        print(calculator.delete_history_record(index))
+                        print(self.calculator.delete_history_record(index))
                     else:
                         logging.warning("Invalid index provided for delete_history_record.")
                         print("Error: Please provide a valid index to delete.")
@@ -70,7 +76,7 @@ class App:
 
                 elif cmd_input.lower() == 'menu':
                     print("Available commands:")
-                    print(commandHandler.list_plugins())
+                    print(self.commandHandler.list_plugins())
                 # Split the command and its arguments
                 cmd_parts = cmd_input.split()
                 if len(cmd_parts) == 0:
@@ -97,14 +103,14 @@ class App:
 
                     # Perform the operation and log results
                     if operation == "add":
-                        result = calculator.add(arg1, arg2)
+                        result = self.calculator.add(arg1, arg2)
                     elif operation == "subtract":
-                        result = calculator.subtract(arg1, arg2)
+                        result = self.calculator.subtract(arg1, arg2)
                     elif operation == "multiply":
-                        result = calculator.multiply(arg1, arg2)
+                        result = self.calculator.multiply(arg1, arg2)
                     elif operation == "divide":
                         try:
-                            result = calculator.divide(arg1, arg2)
+                            result = self.calculator.divide(arg1, arg2)
                         except ZeroDivisionError:
                             logging.error("Division by zero error.")
                             print("Error: Division by zero is not allowed.")
@@ -114,18 +120,30 @@ class App:
                     print(f"Result: {result}")
 
                 # Handle plugin commands
-                elif operation in commandHandler.commands.keys():
+                elif operation in self.commandHandler.commands.keys():
                     try:
-                        commandHandler.commands[operation][0].execute(*arguments)
+                        self.commandHandler.commands[operation][0].execute(*arguments)
                     except Exception as e:
                         logging.error(f"Error executing command '{operation}': {e}")
                         print(f"Error: Failed to execute '{operation}'. {e}")
 
-                else:
-                    logging.error(f"Unknown command: {operation}")
-                    print(f"Error: Unknown command '{operation}'.")
+                if operation not in self.commandHandler.list_plugins() +  ['add', 'subtract', 'multiply', 'divide']: 
+
+                    print("command not found")
+                # else:
+                #     logging.error(f"Unknown command: {operation}")
+                #     print(f"Error: Unknown command '{operation}'.")
 
             except Exception as e:
                 logging.error(f"An unexpected error occurred: {e}")
                 print(f"Error: An unexpected error occurred: {e}")
+    def start(self):
+        
+        self.commandHandler.load_plugins("plugins")
+        print(self.commandHandler.commands)
+        logging.info("Application started. Type 'exit' to exit.")
+
+        self.repl()
+
+       
 
