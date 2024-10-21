@@ -62,7 +62,7 @@ class App:
                     print(self.calculator.load_history())
                     continue
 
-                elif cmd_input.lower() == "save_history":
+                if cmd_input.lower() == "save_history":
                     logging.info("Saving history.")
                     print(self.calculator.save_history())
                     continue
@@ -76,7 +76,7 @@ class App:
 
                     if len(cmd_parts) == 2 and cmd_parts[1].isdigit():
                         index = int(cmd_parts[1])
-                        logging.info(f"Deleting history record at index: {index}")
+                        logging.info("Deleting history record at index: %d", index)
                         print(self.calculator.delete_history_record(index))
                     else:
                         logging.warning("Invalid index provided for delete_history_record.")
@@ -97,7 +97,7 @@ class App:
                 # Handle built-in calculator operations
                 if operation in ['add', 'subtract', 'multiply', 'divide']:
                     if len(arguments) != 2:
-                        logging.error(f"{operation} requires exactly 2 arguments.")
+                        logging.error("%s requires exactly 2 arguments.", operation)
                         print(f"Error: {operation} requires exactly 2 arguments.")
                         continue
 
