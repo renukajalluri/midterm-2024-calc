@@ -176,3 +176,31 @@ Added 1.0 + 2.0 = 3.0
 2024-10-21 12:45:25,568 - INFO - Plugin 'Test' registered successfully.
 2024-10-21 12:45:25,568 - INFO - Application started. Type 'exit' to exit.
 2024-10-21 12:45:53,326 - INFO - Exiting the calculator.
+2024-10-21 12:48:08,410 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 12:48:08,410 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 12:48:08,410 - INFO - Calculator REPL started.
+2024-10-21 12:48:08,410 - INFO - Application started. Type 'exit' to exit.
+2024-10-21 12:49:00,998 - INFO - Exiting the calculator.
+2024-10-21 12:49:03,642 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 12:49:03,642 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 12:49:03,642 - INFO - Calculator REPL started.
+2024-10-21 12:49:03,642 - INFO - Application started. Type 'exit' to exit.
+2024-10-21 12:49:25,292 - INFO - Exiting the calculator.
+2024-10-21 12:49:30,849 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 12:49:30,849 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 12:49:30,849 - INFO - Calculator REPL started.
+2024-10-21 12:49:30,849 - INFO - Application started. Type 'exit' to exit.
+2024-10-21 12:50:11,760 - INFO - Exiting the calculator.
+2024-10-21 12:50:14,500 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 12:50:14,500 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 12:50:14,500 - INFO - Calculator REPL started.
+2024-10-21 12:50:14,500 - INFO - Application started. Type 'exit' to exit.
+2024-10-21 12:51:57,709 - INFO - Exiting the calculator.
+2024-10-21 12:52:01,761 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 12:52:01,761 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 12:52:01,761 - INFO - Calculator REPL started.
+2024-10-21 12:52:01,761 - INFO - Type 'exit' to exit.
+2024-10-21 12:52:12,514 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 12:52:12,514 - INFO - Plugin 'Test' registered successfully.
+2024-10-21 12:52:12,514 - INFO - Calculator REPL started.
+2024-10-21 12:52:12,514 - INFO - Type 'exit' to exit.

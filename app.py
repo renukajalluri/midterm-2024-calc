@@ -32,9 +32,6 @@ class App:
          while True:
             try:
                 cmd_input = input(">>> ").strip()
-
-                
-
                 if cmd_input.lower() == 'exit':
                     logging.info("Exiting the calculator.")
                     print("Exiting the calculator.")
@@ -141,7 +138,10 @@ class App:
         
         self.commandHandler.load_plugins("plugins")
         print(self.commandHandler.commands)
-        logging.info("Application started. Type 'exit' to exit.")
+        logging.info("Calculator REPL started.")
+
+        logging.info("Type 'exit' to exit.")
+        print("Available history commands: load_history, save_history, clear_history, delete_history_record <index>.")
 
         self.repl()
 

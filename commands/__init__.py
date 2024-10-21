@@ -53,12 +53,12 @@ class CommandHandler:
     def register_plugin(self, plugin, arguments):
         """Register a new plugin and its commands."""
         if isinstance(plugin, Command):
-            print(arguments)
-            if len(arguments) > 1:
-                self.commands[plugin.__class__.__name__.lower()] = [plugin, f"No of Arguments is {len(arguments) - 1} & Arguments are {arguments[1:]}"]
-            else:
-                self.commands[plugin.__class__.__name__.lower()] = [plugin, f"No of Arguments is {len(arguments) - 1}"]
             logging.info(f"Plugin '{plugin.__class__.__name__}' registered successfully.")
+            if len(arguments) > 1:
+                self.commands[plugin.__class__.__name__.lower()] = [plugin.__class__.__name__.lower(), f"No of Arguments is {len(arguments) - 1} & Arguments are {arguments[1:]}"]
+            else:
+                self.commands[plugin.__class__.__name__.lower()] = [plugin.__class__.__name__.lower(), f"No of Arguments is {len(arguments) - 1}"]
+            
 
     def list_plugins(self):
         """List all available plugin commands."""
