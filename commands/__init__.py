@@ -9,23 +9,28 @@ class Command:
         """Execute the plugin command with given arguments."""
         raise NotImplementedError("Plugin must implement the execute method.")
 
-class CommandHandler:
-    """Class to manage loading plugins dynamically."""
-    def __init__(self):
+class CommandHandlerSingleton:
+    """Singleton class to manage loading plugins dynamically."""
+    _instance = None
 
-        self.commands = {}
-    
+    def __new__(cls):
+        """Override the __new__ method to ensure only one instance of the class."""
+        if cls._instance is None:
+            cls._instance = super(CommandHandlerSingleton, cls).__new__(cls)
+            cls._instance.commands = {}
+        return cls._instance
+
     def register_command(self, command_name: str, command: Command):
         self.commands[command_name] = command
 
     def execute_command(self, command_name: str):
-        """ Look before you leap (LBYL) - Use when its less likely to work
+        """Look before you leap (LBYL) - Use when its less likely to work
         if command_name in self.commands:
             self.commands[command_name].execute()
         else:
             print(f"No such command: {command_name}")
         """
-        """Easier to ask for forgiveness than permission (EAFP) - Use when its going to most likely work"""
+        """Easier to ask for forgiveness than permission (EAFP) - Use when it's most likely to work."""
         try:
             self.commands[command_name].execute()
         except KeyError:
@@ -38,22 +43,21 @@ class CommandHandler:
                 module_name = filename[:-3]
                 module = importlib.import_module(f"plugins.{module_name}")
 
-                # Register each class that inherits from Plugin
+                # Register each class that inherits from Command
                 for name, cls in inspect.getmembers(module, inspect.isclass):
                     if issubclass(cls, Command) and cls is not Command:
                         signature = inspect.signature(cls.execute)
                         arguments = signature.parameters.values()
-                        self.register_plugin(cls(),list(arguments))
+                        self.register_plugin(cls(), list(arguments))
 
-    def register_plugin(self, plugin,arguments):
+    def register_plugin(self, plugin, arguments):
         """Register a new plugin and its commands."""
         if isinstance(plugin, Command):
             print(arguments)
-            if len(arguments) > 1 :
-                self.commands[plugin.__class__.__name__.lower()] = [plugin,f"No of Arguments is {len(arguments)-1} & Arguments are {arguments[1:]}"]
-            
-            else : 
-                self.commands[plugin.__class__.__name__.lower()] = [plugin,f"No of Arguments is {len(arguments)-1}"]
+            if len(arguments) > 1:
+                self.commands[plugin.__class__.__name__.lower()] = [plugin, f"No of Arguments is {len(arguments) - 1} & Arguments are {arguments[1:]}"]
+            else:
+                self.commands[plugin.__class__.__name__.lower()] = [plugin, f"No of Arguments is {len(arguments) - 1}"]
             logging.info(f"Plugin '{plugin.__class__.__name__}' registered successfully.")
 
     def list_plugins(self):
