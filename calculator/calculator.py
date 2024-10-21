@@ -6,7 +6,6 @@ class Calculator:
     """The main calculator class that performs basic arithmetic operations and manages plugins."""    
     def __init__(self):
         self.history_facade = HistoryFacade()
-
     def add(self, a, b):
         result = a + b
         entry = f"Added {a} + {b} = {result}"

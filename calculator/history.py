@@ -52,5 +52,4 @@ class HistoryFacade:
         """Return a string representation of the current history."""
         if not self.history_df.empty:
             return self.history_df.to_string(index=False)
-        
         return "No history available."

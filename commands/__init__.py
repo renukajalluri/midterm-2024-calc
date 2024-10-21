@@ -67,8 +67,7 @@ class CommandHandler:
                     if issubclass(cls, Command) and cls is not Command:
                         # used to identify the arguments
                         signature = inspect.signature(cls.execute)
-                        arguments = signature.parameters.values()
-                      
+                        arguments = signature.parameters.values()                      
                         self.register_plugin(cls.command_name, cls(), list(arguments))
 
     def register_plugin(self, command_name, plugin, arguments):

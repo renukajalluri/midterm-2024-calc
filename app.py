@@ -18,11 +18,9 @@ Dependencies:
 """
 import logging
 import os
-from calculator.calculator import Calculator
-from commands import CommandHandler
-import sys
-
-from dotenv import load_dotenv
+from dotenv import load_dotenv  # Third-party import
+from calculator.calculator import Calculator  # First-party import
+from commands import CommandHandler  # First-party import
 
 load_dotenv()
 # Configure logging
@@ -138,22 +136,14 @@ class App:
                         print(f"Error: Failed to execute '{operation}'. {e}")
 
                 if operation not in self.commandHandler.list_plugins() +  ['add', 'subtract', 'multiply', 'divide',"menu"]: 
-
                     print("command not found")
-               
             except Exception as e:
                 logging.error(f"An unexpected error occurred: {e}")
                 print(f"Error: An unexpected error occurred: {e}")
-    def start(self):
-        
+    def start(self):    
         self.commandHandler.load_plugins("plugins")
         print(self.commandHandler.commands)
         logging.info("Calculator REPL started.")
-
         logging.info("Type 'exit' to exit.")
         print("Available history commands: load_history, save_history, clear_history, delete_history_record <index>.")
-
         self.repl()
-
-       
-
