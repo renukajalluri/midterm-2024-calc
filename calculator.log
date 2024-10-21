@@ -161,3 +161,11 @@ Added 1.0 + 2.0 = 3.0
 2024-10-21 09:27:13,603 - INFO - Application started. Type 'exit' to exit.
 2024-10-21 09:27:37,914 - ERROR - Error executing command 'greetplugin': GreetPlugin.execute() missing 2 required positional arguments: 'arg1' and 'arg2'
 2024-10-21 12:33:37,481 - INFO - Exiting the calculator.
+2024-10-21 12:36:27,363 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 12:36:27,363 - INFO - Application started. Type 'exit' to exit.
+2024-10-21 12:36:32,065 - INFO - Added 1.0 + 2.0 = 3.0
+2024-10-21 12:36:32,065 - INFO - Result of add: 3.0
+2024-10-21 12:36:37,831 - INFO - Saving history.
+2024-10-21 12:36:37,831 - INFO - History saved to 'calculation_history.csv'.
+2024-10-21 12:36:41,882 - INFO - Loading history.
+2024-10-21 12:36:41,884 - INFO - History loaded from 'calculation_history.csv'.
