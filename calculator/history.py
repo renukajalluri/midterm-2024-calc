@@ -1,7 +1,13 @@
 import os  # Standard library import
 import logging  # Standard library import
 import pandas as pd  # Third-party import
+"""
+Module for managing calculation history using Pandas DataFrame.
 
+This module provides the HistoryFacade class, which allows
+adding, saving, loading, clearing, and deleting history entries
+from a CSV file.
+"""
 class HistoryFacade:
     """Facade class for managing history using Pandas DataFrame."""    
     def __init__(self, history_file="calculation_history.csv"):
