@@ -1,10 +1,9 @@
-import pandas as pd
-import os
-import logging
+import os  # Standard library import
+import logging  # Standard library import
+import pandas as pd  # Third-party import
 
 class HistoryFacade:
-    """Facade class for managing history using Pandas DataFrame."""
-    
+    """Facade class for managing history using Pandas DataFrame."""    
     def __init__(self, history_file="calculation_history.csv"):
         self.history_file = history_file
         self.history_df = pd.DataFrame(columns=["Calculation"])  # Initialize an empty DataFrame
@@ -21,17 +20,18 @@ class HistoryFacade:
     def save_history(self):
         """Save the DataFrame to a CSV file."""
         self.history_df.to_csv(self.history_file, index=False)
-        logging.info(f"History saved to '{self.history_file}'.")
+        logging.info("History saved to '%s'.", self.history_file)
+
 
     def load_history(self):
         """Load the history from a CSV file."""
         if os.path.exists(self.history_file):
             self.history_df = pd.read_csv(self.history_file)
-            logging.info(f"History loaded from '{self.history_file}'.")
+            logging.info("History loaded from '%s'.", self.history_file)
             return self.history_df
-        else:
-            logging.warning("No history file found.")
-            return pd.DataFrame(columns=["Calculation"])  # Return empty DataFrame if file not found
+        
+        logging.warning("No history file found.")
+        return pd.DataFrame(columns=["Calculation"])  # Return empty DataFrame if file not found
 
     def clear_history(self):
         """Clear the history DataFrame."""
@@ -43,15 +43,14 @@ class HistoryFacade:
         if 0 <= index < len(self.history_df):
             deleted_record = self.history_df.iloc[index]
             self.history_df = self.history_df.drop(index).reset_index(drop=True)
-            logging.info(f"Deleted record: {deleted_record['Calculation']}")
+            logging.info("Deleted record: %s", deleted_record['Calculation'])
             return f"Deleted record: {deleted_record['Calculation']}"
-        else:
-            logging.error("Invalid index provided for deletion.")
-            return "Invalid index. No record deleted."
+        logging.error("Invalid index provided for deletion.")
+        return "Invalid index. No record deleted."
 
     def show_history(self):
         """Return a string representation of the current history."""
         if not self.history_df.empty:
             return self.history_df.to_string(index=False)
-        else:
-            return "No history available."
+        
+        return "No history available."

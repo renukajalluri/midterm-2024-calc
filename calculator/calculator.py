@@ -1,10 +1,9 @@
-from calculator.history import HistoryFacade
 import logging
+from calculator.history import HistoryFacade
 
 
 class Calculator:
-    """The main calculator class that performs basic arithmetic operations and manages plugins."""
-    
+    """The main calculator class that performs basic arithmetic operations and manages plugins."""    
     def __init__(self):
         self.history_facade = HistoryFacade()
 
@@ -53,8 +52,7 @@ class Calculator:
         loaded_history = self.history_facade.load_history()
         if not loaded_history.empty:
             return loaded_history.to_string(index=False)
-        else:
-            return "No history found."
+        return "No history found."
 
     def clear_history(self):
         """Clear the current calculation history."""

@@ -1,3 +1,21 @@
+"""
+Module for a calculator application with REPL (Read-Eval-Print Loop) functionality.
+
+This module sets up a calculator application that allows users to perform basic arithmetic operations 
+(add, subtract, multiply, divide) and manage calculation history through a command-line interface.
+It also supports loading additional commands via plugins using a command handler.
+
+Environment variables:
+- LOG_LEVEL: The logging level (e.g., DEBUG, INFO).
+- LOG_FILE: The name of the log file to store logs.
+
+Classes:
+- App: Main application class that initializes the calculator and command handler, manages the REPL, and processes user commands.
+
+Dependencies:
+- calculator.Calculator: Handles arithmetic operations and history management.
+- commands.CommandHandler: Manages additional plugin-based commands.
+"""
 import logging
 import os
 from calculator.calculator import Calculator
@@ -22,11 +40,9 @@ logging.basicConfig(
 
 
 class App:
-
     def __init__(self):
         self.calculator = Calculator()
         self.commandHandler = CommandHandler()
-
     def environment_variables(self):
         pass
     def repl(self):
@@ -57,7 +73,6 @@ class App:
                  logging.info("Clearing history.")
                  print(self.calculator.clear_history())
                  continue
-
                 elif cmd_input.startswith("delete_history_record"):
                     cmd_parts = cmd_input.split()
 
@@ -69,9 +84,6 @@ class App:
                         logging.warning("Invalid index provided for delete_history_record.")
                         print("Error: Please provide a valid index to delete.")
                     continue
-
- 
-
                 elif cmd_input.lower() == 'menu':
                     print("Available commands:")
                     print(self.commandHandler.list_plugins())

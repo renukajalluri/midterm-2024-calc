@@ -269,3 +269,10 @@ Added 1.0 + 2.0 = 3.0
 2024-10-21 13:54:04,872 - INFO - Plugin 'Test' registered successfully.
 2024-10-21 13:54:04,872 - INFO - Calculator REPL started.
 2024-10-21 13:54:04,872 - INFO - Type 'exit' to exit.
+2024-10-21 21:28:36,406 - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-21 21:28:36,406 - INFO - Calculator REPL started.
+2024-10-21 21:28:36,415 - INFO - Type 'exit' to exit.
+2024-10-21 21:28:40,737 - ERROR - Error executing command 'greet': GreetPlugin.execute() missing 2 required positional arguments: 'arg1' and 'arg2'
+2024-10-21 21:28:56,281 - INFO - Loading history.
+2024-10-21 21:28:56,284 - INFO - History loaded from 'calculation_history.csv'.
+2024-10-21 21:29:09,064 - INFO - Exiting the calculator.
