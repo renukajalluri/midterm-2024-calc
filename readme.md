@@ -1,6 +1,17 @@
+# Advanced Python Calculator for Software Engineering Graduate Course
+
+This midterm requires the development of an advanced Python-based calculator application. Designed to underscore the importance of professional software development practices, the application integrates clean, maintainable code, the application of design patterns, comprehensive logging, dynamic configuration via environment variables, sophisticated data handling with Pandas, and a command-line interface (REPL) for real-time user interaction.
+
+# Getting Started
+
+**Prerequisites:**
+Python 3.8 or higher
+pytest for running tests
+
+**Installation:**
+
+
 # Design Patterns Used:
-
-
 1. **Facade Pattern:**: Implemented in the HistoryFacade class to simplify interactions with the history management functionalities. This pattern hides the complexities of the underlying operations (like adding, saving, loading, and clearing history) and provides a simplified interface.
 
 Code: (https://github.com/Hk574/Midterm-project.git/calculator/history.py)
