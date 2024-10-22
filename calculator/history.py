@@ -34,8 +34,7 @@ class HistoryFacade:
         if os.path.exists(self.history_file):
             self.history_df = pd.read_csv(self.history_file)
             logging.info("History loaded from '%s'.", self.history_file)
-            return self.history_df
-        
+            return self.history_df        
         logging.warning("No history file found.")
         return pd.DataFrame(columns=["Calculation"])  # Return empty DataFrame if file not found
 

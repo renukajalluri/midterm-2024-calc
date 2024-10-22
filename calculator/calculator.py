@@ -7,6 +7,7 @@ class Calculator:
     def __init__(self):
         self.history_facade = HistoryFacade()
     def add(self, a, b):
+        """Return the sum of a and b."""
         result = a + b
         entry = f"Added {a} + {b} = {result}"
         self.history_facade.add_entry(entry)
@@ -14,6 +15,7 @@ class Calculator:
         return result
 
     def subtract(self, a, b):
+        """Return the result of a minus b."""
         result = a - b
         entry = f"Subtracted {a} - {b} = {result}"
         self.history_facade.add_entry(entry)
@@ -21,6 +23,7 @@ class Calculator:
         return result
 
     def multiply(self, a, b):
+        """Return the product of a and b."""
         result = a * b
         entry = f"Multiplied {a} * {b} = {result}"
         self.history_facade.add_entry(entry)
@@ -28,6 +31,7 @@ class Calculator:
         return result
 
     def divide(self, a, b):
+        """Return the result of a divided by b."""
         if b == 0:
             logging.error("Division by zero attempted.")
             raise ValueError("Cannot divide by zero.")
