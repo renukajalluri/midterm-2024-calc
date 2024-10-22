@@ -18,31 +18,39 @@ Dependencies:
 """
 import logging
 import os
+import logging.config
 from dotenv import load_dotenv  # Third-party import
 from calculator.calculator import Calculator  # First-party import
 from commands import CommandHandler  # First-party import
 
-load_dotenv()
-# Configure logging
-LOG_LEVEL = os.getenv('LOG_LEVEL').upper()  # Default to INFO if not set
-LOG_FILE = os.getenv('LOG_FILE')  # Default log file name
-
-logging.basicConfig(
-    level=LOG_LEVEL,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler(LOG_FILE),  # Log to a file
-        logging.StreamHandler()  # Also log to the console
-    ]
-)
-
 
 class App:
     def __init__(self):
+        os.makedirs('logs', exist_ok=True)
+        self.configure_logging()
+        load_dotenv()
+        self.settings = self.load_environment_variables()
+        self.settings.setdefault('ENVIRONMENT', 'PRODUCTION')
         self.calculator = Calculator()
         self.commandHandler = CommandHandler()
-    def environment_variables(self):
-        pass
+
+    def configure_logging(self):
+        logging_conf_path = 'logging.conf'
+        if os.path.exists(logging_conf_path):
+            logging.config.fileConfig(logging_conf_path, disable_existing_loggers=False)
+        else:
+            logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+        logging.info("Logging configured.")
+
+    def load_environment_variables(self):
+        settings = {key: value for key, value in os.environ.items()}
+        logging.info("Environment variables loaded.")
+        return settings
+
+    def get_environment_variable(self, env_var: str = 'ENVIRONMENT'):
+        return self.settings.get(env_var, None)
+
+
     def repl(self):
          while True:
             try:
@@ -124,7 +132,7 @@ class App:
                             print("Error: Division by zero is not allowed.")
                             continue
 
-                    logging.info(f"Result of {operation}: {result}")
+                    logging.info("Result of %s: %s", operation, result)
                     print(f"Result: {result}")
 
                 # Handle plugin commands
