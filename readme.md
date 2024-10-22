@@ -21,6 +21,18 @@ Logging Implementation: Logging is configured at the application startup to trac
 # Error Handling
 The application implements two approaches for error handling:
 
+**Easier to Ask for Forgiveness than Permission (EAFP):**:Assumes operations will succeed and handles exceptions if they occur.
+
+**Example:**
+
+try:
+    self.command_handler.commands[operation][0].execute(*arguments)
+except Exception as e:
+    logging.error("Error executing command '%s': %s", operation, e)
+    
+Code: (https://github.com/Hk574/Midterm-project.git/app.py)
+
+
 **Look Before You Leap (LBYL):** Uses condition checks before performing actions (e.g., verifying command arguments).
 
 **Example:**
@@ -31,4 +43,5 @@ if len(arguments) != 2:
 
 
 Code: [app.py](https://github.com/Hk574/Midterm-project.git/app.py)
+
 
