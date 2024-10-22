@@ -1,6 +1,12 @@
+from unittest.mock import patch
 import pytest
 
 from app import App
+
+@pytest.fixture
+def app():
+    """Fixture for creating an instance of the App."""
+    return App()
 
 def test_app_get_environment_variable():
     app = App()
@@ -35,3 +41,21 @@ def test_app_start_unknown_command(capfd, monkeypatch):
     # Verify that the unknown command was handled as expected
     captured = capfd.readouterr()
     assert "No such command: unknown_command" in captured.out
+
+def test_menu(app, monkeypatch, capsys):
+    """Test the menu command."""
+    # Simulate user entering 'menu' followed by 'exit'
+    inputs = iter(['menu', 'exit'])
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+    app = App()
+    # Run the REPL
+    with pytest.raises(SystemExit):
+        app.start()
+
+    # Capture the printed output
+    captured = capsys.readouterr()
+    
+    # Check if the expected output is present
+    assert "Available commands:" in captured.out
+
+
