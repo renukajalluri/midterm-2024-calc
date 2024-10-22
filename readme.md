@@ -21,7 +21,7 @@ Logging Implementation: Logging is configured at the application startup to trac
 # Error Handling
 The application implements two approaches for error handling:
 
-Look Before You Leap (LBYL): Uses condition checks before performing actions (e.g., verifying command arguments).
+**Look Before You Leap (LBYL):**: Uses condition checks before performing actions (e.g., verifying command arguments).
 
 Example:
 
@@ -30,7 +30,7 @@ if len(arguments) != 2:
 
 Link to code: app.py
 
-Easier to Ask for Forgiveness than Permission (EAFP): Assumes operations will succeed and handles exceptions if they occur.
+**Easier to Ask for Forgiveness than Permission (EAFP):**: Assumes operations will succeed and handles exceptions if they occur.
 
 Example:
 
