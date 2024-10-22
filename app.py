@@ -19,6 +19,7 @@ class App:
         self.command_handler = CommandHandler()
 
     def configure_logging(self):
+        """Configure logging settings from a file or set basic configuration."""
         logging_conf_path = 'logging.conf'
         if os.path.exists(logging_conf_path):
             logging.config.fileConfig(logging_conf_path, disable_existing_loggers=False)
@@ -27,16 +28,19 @@ class App:
         logging.info("Logging configured.")
 
     def load_environment_variables(self):
+        """Load and return environment variables as a dictionary."""
         settings = {key: value for key, value in os.environ.items()}
         logging.info("Environment variables loaded.")
         return settings
 
     def get_environment_variable(self, env_var: str = 'ENVIRONMENT'):
+        """Return the value of the specified environment variable."""
         return self.settings.get(env_var, None)
 
 
     def repl(self):
-         while True:
+        """Run the Read-Eval-Print Loop (REPL) for user input and command processing."""
+        while True:
             try:
                 cmd_input = input(">>> ").strip()
                 if cmd_input.lower() == 'exit':
@@ -55,11 +59,11 @@ class App:
                     logging.info("Saving history.")
                     print(self.calculator.save_history())
                     continue
-                elif cmd_input.lower() == "clear_history":
+                if cmd_input.lower() == "clear_history":
                  logging.info("Clearing history.")
                  print(self.calculator.clear_history())
                  continue
-                elif cmd_input.startswith("delete_history_record"):
+                if cmd_input.startswith("delete_history_record"):
                     cmd_parts = cmd_input.split()
 
                     if len(cmd_parts) == 2 and cmd_parts[1].isdigit():
@@ -70,7 +74,7 @@ class App:
                         logging.warning("Invalid index provided for delete_history_record.")
                         print("Error: Please provide a valid index to delete.")
                     continue
-                elif cmd_input.lower() == 'menu':
+                if cmd_input.lower() == 'menu':
                     print("Available commands:")
                     print(self.command_handler.list_plugins())
                 # Split the command and its arguments
@@ -120,15 +124,16 @@ class App:
                     try:
                         self.command_handler.commands[operation][0].execute(*arguments)
                     except Exception as e:
-                        logging.error(f"Error executing command '{operation}': {e}")
+                        logging.error("Error executing command '%s': %s", operation, e)
                         print(f"Error: Failed to execute '{operation}'. {e}")
 
                 if operation not in self.command_handler.list_plugins() +  ['add', 'subtract', 'multiply', 'divide',"menu"]: 
                     print("command not found")
             except Exception as e:
-                logging.error(f"An unexpected error occurred: {e}")
+                logging.error("An unexpected error occurred: %s", e)
                 print(f"Error: An unexpected error occurred: {e}")
-    def start(self):    
+    def start(self):   
+        """Initialize the calculator, load plugins, and start the REPL.""" 
         self.command_handler.load_plugins("plugins")
         print(self.command_handler.commands)
         logging.info("Calculator REPL started.")
