@@ -8,6 +8,7 @@ from commands import CommandHandler  # First-party import
 
 
 class App:
+    """Main application class for the command-line calculator with REPL functionality."""
     def __init__(self):
         os.makedirs('logs', exist_ok=True)
         self.configure_logging()
@@ -15,7 +16,7 @@ class App:
         self.settings = self.load_environment_variables()
         self.settings.setdefault('ENVIRONMENT', 'PRODUCTION')
         self.calculator = Calculator()
-        self.commandHandler = CommandHandler()
+        self.command_handler = CommandHandler()
 
     def configure_logging(self):
         logging_conf_path = 'logging.conf'
@@ -42,22 +43,18 @@ class App:
                     logging.info("Exiting the calculator.")
                     print("Exiting the calculator.")
                     break
-
                 if cmd_input.lower() == 'history':
                     print("Calculation History:")
                     print(self.calculator.show_history())
-                    break
-                
+                    break                
                 if cmd_input.lower() == 'load_history':
                     logging.info("Loading history.")
                     print(self.calculator.load_history())
                     continue
-
                 if cmd_input.lower() == "save_history":
                     logging.info("Saving history.")
                     print(self.calculator.save_history())
                     continue
-
                 elif cmd_input.lower() == "clear_history":
                  logging.info("Clearing history.")
                  print(self.calculator.clear_history())
@@ -75,7 +72,7 @@ class App:
                     continue
                 elif cmd_input.lower() == 'menu':
                     print("Available commands:")
-                    print(self.commandHandler.list_plugins())
+                    print(self.command_handler.list_plugins())
                 # Split the command and its arguments
                 cmd_parts = cmd_input.split()
                 if len(cmd_parts) == 0:
@@ -119,21 +116,21 @@ class App:
                     print(f"Result: {result}")
 
                 # Handle plugin commands
-                elif operation in self.commandHandler.commands.keys():
+                elif operation in self.command_handler.commands.keys():
                     try:
-                        self.commandHandler.commands[operation][0].execute(*arguments)
+                        self.command_handler.commands[operation][0].execute(*arguments)
                     except Exception as e:
                         logging.error(f"Error executing command '{operation}': {e}")
                         print(f"Error: Failed to execute '{operation}'. {e}")
 
-                if operation not in self.commandHandler.list_plugins() +  ['add', 'subtract', 'multiply', 'divide',"menu"]: 
+                if operation not in self.command_handler.list_plugins() +  ['add', 'subtract', 'multiply', 'divide',"menu"]: 
                     print("command not found")
             except Exception as e:
                 logging.error(f"An unexpected error occurred: {e}")
                 print(f"Error: An unexpected error occurred: {e}")
     def start(self):    
-        self.commandHandler.load_plugins("plugins")
-        print(self.commandHandler.commands)
+        self.command_handler.load_plugins("plugins")
+        print(self.command_handler.commands)
         logging.info("Calculator REPL started.")
         logging.info("Type 'exit' to exit.")
         print("Available history commands: load_history, save_history, clear_history, delete_history_record <index>.")
