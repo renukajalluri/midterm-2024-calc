@@ -27,8 +27,7 @@ class DataPlugin(Command):
 
                 # Print the rows
                 for row in reader:
-                    print(f"{' | '.join(row)}")
-                
+                    print(f"{' | '.join(row)}")                
                 logging.info("Displayed data from CSV file: %s", filename)
         except FileNotFoundError:
             print(f"Error: The file '{filename}' was not found.")

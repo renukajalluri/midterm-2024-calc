@@ -1,11 +1,12 @@
 """A command-line calculator with REPL functionality for basic arithmetic, plugin support, and interaction logging."""
 import logging
-import os
 import logging.config
+import os
 import sys
 from dotenv import load_dotenv  # Third-party import
 from calculator.calculator import Calculator  # First-party import
 from commands import CommandHandler  # First-party import
+
 
 
 class App:
@@ -130,7 +131,7 @@ class App:
                         print(f"Error: Failed to execute '{operation}'. {e}")
 
                 if operation not in self.command_handler.list_plugins() +  ['add', 'subtract', 'multiply', 'divide',"menu"]:
-                    logging.error(f"No such command: unknown_command {cmd_input}")
+                    logging.error("No such command: unknown_command %s", cmd_input)
                     sys.exit(1) 
             except Exception as e:
                 logging.error("An unexpected error occurred: %s", e)

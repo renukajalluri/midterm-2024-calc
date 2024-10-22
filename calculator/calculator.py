@@ -1,3 +1,4 @@
+"""Module for the Calculator class, handling arithmetic operations and history management."""
 import logging
 from calculator.history import HistoryFacade
 

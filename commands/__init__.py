@@ -54,7 +54,7 @@ class CommandHandler:
         try:
             self.commands[command_name].execute()
         except KeyError:
-            logging.error(f"No such command: {command_name}")
+            logging.error("No such command: %s", command_name)
 
     def load_plugins(self, plugins_directory):
         """Dynamically load plugins from the specified directory."""

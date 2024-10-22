@@ -1,6 +1,4 @@
-from unittest.mock import patch
 import pytest
-
 from app import App
 
 @pytest.fixture
@@ -29,15 +27,9 @@ def test_app_start_unknown_command(capfd, monkeypatch):
     # Simulate user entering an unknown command followed by 'exit'
     inputs = iter(['unknown_command', 'exit'])
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
-
     app = App()
-    
-    with pytest.raises(SystemExit) as excinfo:
+    with pytest.raises(SystemExit):
         app.start()
-    
-    # Optionally, check for specific exit code or message
-    # assert excinfo.value.code == expected_exit_code
-    
     # Verify that the unknown command was handled as expected
     captured = capfd.readouterr()
     assert "No such command: unknown_command" in captured.out
@@ -78,13 +70,10 @@ def test_delete_history_record(app, monkeypatch, capsys):
     app.calculator.save_history()  # Save it first
     inputs = iter(['delete_history_record 0', 'exit'])  
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
-
     with pytest.raises(SystemExit):
         app.start()
-
     # Capture the printed output
     captured = capsys.readouterr()
-    
     assert "Deleted record:" in captured.out  
 
 def test_add(app, monkeypatch, capsys):
@@ -92,10 +81,8 @@ def test_add(app, monkeypatch, capsys):
     monkeypatch.setattr('builtins.input', lambda _: 'add 2 3')
     inputs = iter(['add 2 3', 'exit'])  
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
-
     with pytest.raises(SystemExit):
         app.start()
-
     # Capture the printed output
     captured = capsys.readouterr()
     assert "Result: 5.0" in captured.out  
@@ -105,10 +92,8 @@ def test_subtract(app, monkeypatch, capsys):
     monkeypatch.setattr('builtins.input', lambda _: 'subtract 5 3')
     inputs = iter(['subtract 5 3', 'exit'])  
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
-
     with pytest.raises(SystemExit):
         app.start()
-
     # Capture the printed output
     captured = capsys.readouterr()
     assert "Result: 2.0" in captured.out 
@@ -133,10 +118,8 @@ def test_divide(app, monkeypatch, capsys):
     monkeypatch.setattr('builtins.input', lambda _: 'divide 6 3')
     inputs = iter(['divide 6 3', 'exit'])  
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
-
     with pytest.raises(SystemExit):
         app.start()
-
     # Capture the printed output
     captured = capsys.readouterr()
     assert "Result: 2.0" in captured.out  
@@ -147,12 +130,9 @@ def test_divide_by_zero(app, monkeypatch, capsys):
     # Prepare input to simulate dividing by zero followed by exit
     inputs = iter(['divide 6 0', 'exit'])  
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
-
     with pytest.raises(SystemExit):
         app.start()
-
     # Capture the printed output
     captured = capsys.readouterr()
-    
     # Check for the expected error message
     assert "Cannot divide by zero." in captured.out  

@@ -16,8 +16,7 @@ class GreetPlugin(Command):
     def execute(arg1, arg2):
         """Execute the greet command with two arguments."""
         print(arg1, arg2)
-        print("greet")
-        
+        print("greet")        
         # Log the arguments correctly
         logging.info("Arguments: %s, %s", arg1, arg2)
         logging.info("greet")

@@ -26,7 +26,7 @@ def calc_fixture():
     reset_history_file()  # Ensure no pre-existing history
     return Calculator()
 @pytest.fixture
-def h_facade():
+def history_facade_fixture():
     """Provide a fresh instance of HistoryFacade with a reset history file."""
     reset_history_file()
     return HistoryFacade()
@@ -101,38 +101,38 @@ def test_save_and_load_history(calc_fixture):
 
 ### Tests for the HistoryFacade class ###
 
-def test_add_entry(h_facade):
+def test_add_entry(history_facade_fixture ):
     """Test adding an entry to the history via HistoryFacade."""
-    h_facade.add_entry("Test Entry")
-    assert "Test Entry" in h_facade.show_history()
+    history_facade_fixture .add_entry("Test Entry")
+    assert "Test Entry" in history_facade_fixture .show_history()
 
-def test_save_history(h_facade):
+def test_save_history(history_facade_fixture ):
     """Test saving the history via HistoryFacade."""
-    h_facade.add_entry("Entry to Save")
-    h_facade.save_history()
+    history_facade_fixture .add_entry("Entry to Save")
+    history_facade_fixture .save_history()
     assert os.path.exists("calculation_history.csv")
 
-def test_load_history(h_facade):
+def test_load_history(history_facade_fixture ):
     """Test loading history entries via HistoryFacade."""
-    h_facade.add_entry("Entry to Load")
-    h_facade.save_history()
+    history_facade_fixture .add_entry("Entry to Load")
+    history_facade_fixture .save_history()
 
     new_facade = HistoryFacade()
     assert "Entry to Load" in new_facade.show_history()
 
-def test_clear_history_facade(h_facade):
+def test_clear_history_facade(history_facade_fixture ):
     """Test clearing the history via HistoryFacade."""
-    h_facade.add_entry("Clear This Entry")
-    h_facade.clear_history()
-    assert h_facade.show_history() == "No history available."
+    history_facade_fixture .add_entry("Clear This Entry")
+    history_facade_fixture .clear_history()
+    assert history_facade_fixture .show_history() == "No history available."
 
 
-def test_delete_entry(h_facade):
+def test_delete_entry(history_facade_fixture ):
     """Test deleting an entry in the history via HistoryFacade."""
-    h_facade.add_entry("Delete Me")
-    assert h_facade.delete_entry(0) == "Deleted record: Delete Me"
-    assert h_facade.show_history() == "No history available."
+    history_facade_fixture .add_entry("Delete Me")
+    assert history_facade_fixture.delete_entry(0) == "Deleted record: Delete Me"
+    assert history_facade_fixture.show_history() == "No history available."
 
-def test_delete_invalid_entry(h_facade):
+def test_delete_invalid_entry(history_facade_fixture):
     """Test attempting to delete a non-existent entry in the history."""
-    assert h_facade.delete_entry(5) == "Invalid index. No record deleted."
+    assert history_facade_fixture.delete_entry(5) == "Invalid index. No record deleted."
