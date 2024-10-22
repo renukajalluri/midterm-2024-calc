@@ -8,6 +8,7 @@ data from a specified CSV file.
 import logging
 import csv
 from commands import Command
+import os
 
 class DataPlugin(Command):
     """A plugin that displays data from a CSV file."""
@@ -16,7 +17,8 @@ class DataPlugin(Command):
     @staticmethod
     def execute():
         """Execute the data command to display contents of a CSV file."""
-        filename = "data/books.csv"  # Specify the filename here
+        # filename = "data/books.csv"  # Specify the filename here
+        filename = os.getenv("books_file_path")
         try:
             with open(filename, mode='r', newline='', encoding='utf-8') as csvfile:
                 reader = csv.reader(csvfile)
