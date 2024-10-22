@@ -9,6 +9,11 @@ Code: (https://github.com/Hk574/Midterm-project.git/calculator/history.py)
 
 Code: (https://github.com/Hk574/Midterm-project.git/commands/__init__.py)
 
+3. **Factory Method:**: The Factory Method pattern is implemented in the CommandHandlerFactory class, which dynamically loads and registers command plugins at runtime. This allows for the flexible addition of new commands by instantiating subclasses of the Command base class without modifying existing code, thus enhancing scalability and maintainability.
+
+Code: (https://github.com/Hk574/Midterm-project.git/commands/__init__.py)
+
+
 # Environment Variables
 
 Usage of Environment Variables: Environment variables are loaded using the python-dotenv library to manage configurations such as logging levels and plugin paths. This keeps sensitive information out of the codebase and allows easy modifications without altering the code.
