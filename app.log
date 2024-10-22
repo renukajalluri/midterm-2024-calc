@@ -86,3 +86,21 @@
 2024-10-22 13:38:03,487 - root - INFO - Type 'exit' to exit.
 2024-10-22 13:38:08,435 - root - INFO - Displayed data from CSV file: data/books.csv
 2024-10-22 13:41:48,926 - root - INFO - Exiting the calculator.
+2024-10-22 19:06:44,732 - root - INFO - Logging configured.
+2024-10-22 19:06:44,732 - root - INFO - Environment variables loaded.
+2024-10-22 19:06:44,736 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:06:44,736 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:06:44,736 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:06:44,767 - root - INFO - Calculator REPL started.
+2024-10-22 19:06:44,770 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:06:44,770 - root - ERROR - Error executing command 'greet': GreetPlugin.execute() missing 2 required positional arguments: 'arg1' and 'arg2'
+2024-10-22 19:06:44,770 - root - INFO - Exiting the calculator.
+2024-10-22 19:07:05,372 - root - INFO - Logging configured.
+2024-10-22 19:07:05,373 - root - INFO - Environment variables loaded.
+2024-10-22 19:07:05,374 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:07:05,374 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:07:05,374 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:07:05,374 - root - INFO - Calculator REPL started.
+2024-10-22 19:07:05,374 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:07:05,374 - root - ERROR - Error executing command 'greet': GreetPlugin.execute() missing 2 required positional arguments: 'arg1' and 'arg2'
+2024-10-22 19:07:05,374 - root - INFO - Exiting the calculator.
