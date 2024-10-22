@@ -13,3 +13,5 @@
 2024-10-22 12:43:17,992 - root - INFO - Result of divide: 0.5
 2024-10-22 12:43:26,701 - root - INFO - Saving history.
 2024-10-22 12:43:26,706 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 12:43:35,782 - root - INFO - Loading history.
+2024-10-22 12:43:35,782 - root - INFO - History loaded from 'calculation_history.csv'.
