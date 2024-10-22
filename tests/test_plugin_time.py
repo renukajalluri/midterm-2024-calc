@@ -13,7 +13,7 @@ def test_time_plugin_execute(capfd, caplog):
         TimePlugin.execute()
 
         # Capture the printed output
-        out, err = capfd.readouterr()
+        out, _ = capfd.readouterr()
 
         # Extract the current time format
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M")
