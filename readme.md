@@ -10,6 +10,13 @@ This midterm requires the development of an advanced Python-based calculator app
 
 **Installation:**
 
+1. **Clone the repository:**:
+```
+git clone https://github.com/Hk574/Midterm-project.git
+cd interactive-calculator
+```
+
+
 
 # Design Patterns Used:
 1. **Facade Pattern:**: Implemented in the HistoryFacade class to simplify interactions with the history management functionalities. This pattern hides the complexities of the underlying operations (like adding, saving, loading, and clearing history) and provides a simplified interface.
