@@ -2,6 +2,6 @@
 .coverage
 .pytest_cache
 *__pycache__
-.env
 logs
 venv
+app.log

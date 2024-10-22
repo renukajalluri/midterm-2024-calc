@@ -75,9 +75,9 @@ class CommandHandler:
         if isinstance(plugin, Command):
             logging.info("Plugin '%s' registered successfully.", plugin.__class__.__name__)
             if len(arguments) > 1:
-                self.commands[command_name] = [plugin, f"No of Arguments is {len(arguments) - 1} & Arguments are {arguments[1:]}"]
+                self.commands[command_name] = [plugin, f"No of Arguments is {len(arguments)} & Arguments are {arguments[1:]}"]
             else:
-                self.commands[command_name] = [plugin, f"No of Arguments is {len(arguments) - 1}"]
+                self.commands[command_name] = [plugin, f"No of Arguments is {len(arguments)}"]
 
     def list_plugins(self):
         """List all available plugin commands."""
