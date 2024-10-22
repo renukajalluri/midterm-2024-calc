@@ -31,8 +31,7 @@ try:
 except Exception as e:
     logging.error("Error executing command '%s': %s", operation, e)
 
----
-
+```
 
 **Look Before You Leap (LBYL):** Uses condition checks before performing actions (e.g., verifying command arguments).
 
@@ -45,4 +44,4 @@ if len(arguments) != 2:
 
 Code: [app.py](https://github.com/Hk574/Midterm-project.git/app.py)
 
-
+```
