@@ -5,8 +5,8 @@ This midterm requires the development of an advanced Python-based calculator app
 # Getting Started
 
 **Prerequisites:**
-Python 3.8 or higher
-pytest for running tests
+- Python 3.8 or higher
+- pytest for running tests
 
 **Installation:**
 
