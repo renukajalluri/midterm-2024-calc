@@ -76,3 +76,4 @@
 2024-10-22 13:16:07,992 - root - INFO - Calculator REPL started.
 2024-10-22 13:16:07,992 - root - INFO - Type 'exit' to exit.
 2024-10-22 13:16:09,778 - root - INFO - Displayed data from CSV file: data/books.csv
+2024-10-22 13:16:36,426 - root - INFO - Exiting the calculator.

@@ -5,9 +5,8 @@ This module defines the TimePlugin class, which is a plugin for the
 Command framework. It provides functionality to display the current time.
 """
 import logging
-from commands import Command
 from datetime import datetime
-
+from commands import Command
 class TimePlugin(Command):
     """A plugin that displays the current time."""
     command_name = "time"
