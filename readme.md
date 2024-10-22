@@ -26,6 +26,7 @@ Example:
    ```python
    if len(arguments) != 2:
        logging.error("%s requires exactly 2 arguments.", operation)
+       ```
 
 Code: (https://github.com/Hk574/Midterm-project.git/app.py)
 
