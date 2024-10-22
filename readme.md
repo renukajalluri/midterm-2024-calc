@@ -5,20 +5,20 @@
 
 Code: (https://github.com/Hk574/Midterm-project.git/calculator/history.py)
 
-2. Singleton Pattern: Used in the CommandHandler class to ensure that only one instance manages command registration and execution. This ensures consistent behavior across the application.
+2. **Singleton Pattern:**: Used in the CommandHandler class to ensure that only one instance manages command registration and execution. This ensures consistent behavior across the application.
 
 Code: (https://github.com/Hk574/Midterm-project.git/commands/__init__.py)
 
-Environment Variables
+# Environment Variables
 
 Usage of Environment Variables: Environment variables are loaded using the python-dotenv library to manage configurations such as logging levels and plugin paths. This keeps sensitive information out of the codebase and allows easy modifications without altering the code.
 
 Link to Code: (https://github.com/Hk574/Midterm-project.git/.env)
 
-Logging Strategy
+# Logging Strategy
 Logging Implementation: Logging is configured at the application startup to track user interactions and errors. It uses a logging configuration file (logging.conf) or defaults to basic configuration. Log messages provide insights into operational flows and errors encountered, aiding debugging and monitoring.
 
-Error Handling
+# Error Handling
 The application implements two approaches for error handling:
 
 Look Before You Leap (LBYL): Uses condition checks before performing actions (e.g., verifying command arguments).
