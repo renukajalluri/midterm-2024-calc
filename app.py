@@ -7,8 +7,6 @@ from dotenv import load_dotenv  # Third-party import
 from calculator.calculator import Calculator  # First-party import
 from commands import CommandHandler  # First-party import
 
-
-
 class App:
     """Main application class for the command-line calculator with REPL functionality."""
     def __init__(self):
@@ -138,7 +136,7 @@ class App:
                 print(f"Error: An unexpected error occurred: {e}")
     def start(self):   
         """Initialize the calculator, load plugins, and start the REPL.""" 
-        self.command_handler.load_plugins("plugins")
+        self.command_handler.load_plugins(os.getenv("plugin_file_path"))
         logging.info(self.command_handler.commands)
         logging.info("Calculator REPL started.")
         logging.info("Type 'exit' to exit.")
