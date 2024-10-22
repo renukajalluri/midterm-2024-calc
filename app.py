@@ -1,20 +1,10 @@
 """
-Module for a calculator application with REPL (Read-Eval-Print Loop) functionality.
+A command-line calculator application with REPL (Read-Eval-Print Loop) functionality.
 
-This module sets up a calculator application that allows users to perform basic arithmetic operations 
-(add, subtract, multiply, divide) and manage calculation history through a command-line interface.
-It also supports loading additional commands via plugins using a command handler.
-
-Environment variables:
-- LOG_LEVEL: The logging level (e.g., DEBUG, INFO).
-- LOG_FILE: The name of the log file to store logs.
+This module allows users to perform basic arithmetic operations (addition, subtraction, multiplication, division) and manage calculation history. It supports loading additional commands via plugins and logs interactions for debugging and monitoring.
 
 Classes:
-- App: Main application class that initializes the calculator and command handler, manages the REPL, and processes user commands.
-
-Dependencies:
-- calculator.Calculator: Handles arithmetic operations and history management.
-- commands.CommandHandler: Manages additional plugin-based commands.
+- App: The main application class that initializes the calculator, handles user input, and processes commands.
 """
 import logging
 import os

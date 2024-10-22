@@ -63,7 +63,7 @@ class CommandHandler:
                 module_name = filename[:-3]  # removed .py which is of 3 characters
                 module = importlib.import_module(f"plugins.{module_name}")
                 # Register each class that inherits from Command
-                for name, cls in inspect.getmembers(module, inspect.isclass):
+                for _, cls in inspect.getmembers(module, inspect.isclass):
                     if issubclass(cls, Command) and cls is not Command:
                         # used to identify the arguments
                         signature = inspect.signature(cls.execute)
