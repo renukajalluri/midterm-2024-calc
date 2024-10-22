@@ -1,10 +1,9 @@
-Design Patterns
+# Design Patterns Used:
 
-Design Patterns Used:
 
-1. Facade Pattern: Implemented in the HistoryFacade class to simplify interactions with the history management functionalities. This pattern hides the complexities of the underlying operations (like adding, saving, loading, and clearing history) and provides a simplified interface.
+1. **Facade Pattern:**: Implemented in the HistoryFacade class to simplify interactions with the history management functionalities. This pattern hides the complexities of the underlying operations (like adding, saving, loading, and clearing history) and provides a simplified interface.
 
-Link to Code: calculator/history.py
+Link to Code: (https://github.com/Hk574/Midterm-project.git/calculator/history.py)
 
 2. Singleton Pattern: Used in the CommandHandler class to ensure that only one instance manages command registration and execution. This ensures consistent behavior across the application.
 
