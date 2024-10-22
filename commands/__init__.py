@@ -2,17 +2,17 @@
 This module provides a framework for dynamically loading and executing plugins.
 
 It defines the `Command` base class that all plugins must inherit from, and the
-`CommandHandler` singleton class that manages the registration and execution of
+`CommandHandlerFactory` singleton class that manages the registration and execution of
 these commands. 
 
 Classes:
 - Command: Base class for all plugins.
-- CommandHandler: Manages plugin loading and command execution.
+- CommandHandlerFactory: Manages plugin loading and command execution.
 
 Usage:
 1. Define a plugin by subclassing `Command`.
 2. Implement the `execute` method in the plugin.
-3. Use `CommandHandler` to load and execute the plugin commands.
+3. Use `CommandHandlerFactory` to load and execute the plugin commands.
 """
 import importlib
 import logging
@@ -25,14 +25,14 @@ class Command:
         """Execute the plugin command with given arguments."""
         raise NotImplementedError("Plugin must implement the execute method.")
 
-class CommandHandler:
+class CommandHandlerFactory: #factory
     """Singleton class to manage loading plugins dynamically."""
     _instance = None
 
     def __new__(cls):
         """Override the __new__ method to ensure only one instance of the class."""
         if cls._instance is None:
-            cls._instance = super(CommandHandler, cls).__new__(cls)
+            cls._instance = super(CommandHandlerFactory, cls).__new__(cls)
         return cls._instance
 
     def __init__(self):
@@ -52,7 +52,7 @@ class CommandHandler:
     def execute_command(self, command_name: str):
         """Easier to ask for forgiveness than permission (EAFP) - Use when it's most likely to work."""
         try:
-            self.commands[command_name].execute()
+            self.commands[command_name].execute() # depends on command_name calling the concrete command class
         except KeyError:
             logging.error("No such command: %s", command_name)
 

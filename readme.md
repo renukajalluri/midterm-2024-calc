@@ -5,7 +5,7 @@
 
 Code: (https://github.com/Hk574/Midterm-project.git/calculator/history.py)
 
-2. **Singleton Pattern:**: Used in the CommandHandler class to ensure that only one instance manages command registration and execution. This ensures consistent behavior across the application.
+2. **Singleton Pattern:**: Used in the CommandHandlerFactory class to ensure that only one instance manages command registration and execution. This ensures consistent behavior across the application.
 
 Code: (https://github.com/Hk574/Midterm-project.git/commands/__init__.py)
 

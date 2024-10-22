@@ -5,7 +5,7 @@ import os
 import sys
 from dotenv import load_dotenv  # Third-party import
 from calculator.calculator import Calculator  # First-party import
-from commands import CommandHandler  # First-party import
+from commands import CommandHandlerFactory  # First-party import
 
 class App:
     """Main application class for the command-line calculator with REPL functionality."""
@@ -16,7 +16,7 @@ class App:
         self.settings = self.load_environment_variables()
         self.settings.setdefault('ENVIRONMENT', 'PRODUCTION')
         self.calculator = Calculator()
-        self.command_handler = CommandHandler()
+        self.command_handler = CommandHandlerFactory()
 
     def configure_logging(self):
         """Configure logging settings from a file or set basic configuration."""
