@@ -13,10 +13,18 @@ This midterm requires the development of an advanced Python-based calculator app
 1. **Clone the repository:**:
 ```
 git clone https://github.com/Hk574/Midterm-project.git
-cd interactive-calculator
+cd Midterm-project
+```
+2. **Create a virtual environment (optional but recommended):**:
+```
+python3 -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 
-
+3. **Install the dependencies:**:
+```
+pip install -r requirements.txt
+```
 
 # Design Patterns Used:
 1. **Facade Pattern:**: Implemented in the HistoryFacade class to simplify interactions with the history management functionalities. This pattern hides the complexities of the underlying operations (like adding, saving, loading, and clearing history) and provides a simplified interface.
