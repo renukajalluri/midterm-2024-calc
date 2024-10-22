@@ -77,3 +77,12 @@
 2024-10-22 13:16:07,992 - root - INFO - Type 'exit' to exit.
 2024-10-22 13:16:09,778 - root - INFO - Displayed data from CSV file: data/books.csv
 2024-10-22 13:16:36,426 - root - INFO - Exiting the calculator.
+2024-10-22 13:38:03,472 - root - INFO - Logging configured.
+2024-10-22 13:38:03,472 - root - INFO - Environment variables loaded.
+2024-10-22 13:38:03,472 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 13:38:03,472 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 13:38:03,487 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 13:38:03,487 - root - INFO - Calculator REPL started.
+2024-10-22 13:38:03,487 - root - INFO - Type 'exit' to exit.
+2024-10-22 13:38:08,435 - root - INFO - Displayed data from CSV file: data/books.csv
+2024-10-22 13:41:48,926 - root - INFO - Exiting the calculator.

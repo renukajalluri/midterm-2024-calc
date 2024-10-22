@@ -21,12 +21,12 @@ def reset_history_file():
 
 # Fixture to create a fresh instance of Calculator for each test
 @pytest.fixture
-def calc():
+def calc_fixture():
     """Provide a fresh instance of Calculator with a reset history file."""
     reset_history_file()  # Ensure no pre-existing history
     return Calculator()
 @pytest.fixture
-def history_facade():
+def h_facade():
     """Provide a fresh instance of HistoryFacade with a reset history file."""
     reset_history_file()
     return HistoryFacade()
