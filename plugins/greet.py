@@ -7,13 +7,19 @@ printing specified arguments along with a greeting message.
 """
 import logging
 from commands import Command
+
 class GreetPlugin(Command):
     """An example plugin that provides additional functionality."""
     command_name = "greet"
+
     @staticmethod
     def execute(arg1, arg2):
         """Execute the greet command with two arguments."""
-        logging.info(arg1, arg2)
+        print(arg1, arg2)
+        print("greet")
+        
+        # Log the arguments correctly
+        logging.info("Arguments: %s, %s", arg1, arg2)
         logging.info("greet")
 # pylint: disable=too-few-public-methods
 # pylint: disable=arguments-differ

@@ -7,8 +7,8 @@ data from a specified CSV file.
 """
 import logging
 import csv
-from commands import Command
 import os
+from commands import Command
 
 class DataPlugin(Command):
     """A plugin that displays data from a CSV file."""
@@ -23,11 +23,11 @@ class DataPlugin(Command):
             with open(filename, mode='r', newline='', encoding='utf-8') as csvfile:
                 reader = csv.reader(csvfile)
                 headers = next(reader)  # Get the headers
-                logging.info(f"{' | '.join(headers)}")  # Print headers
+                print(f"{' | '.join(headers)}")  # Print headers
 
                 # Print the rows
                 for row in reader:
-                    logging.info(f"{' | '.join(row)}")
+                    print(f"{' | '.join(row)}")
                 
                 logging.info("Displayed data from CSV file: %s", filename)
         except FileNotFoundError:

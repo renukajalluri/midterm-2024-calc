@@ -527,3 +527,572 @@
 2024-10-22 19:19:35,671 - root - ERROR - Error reading CSV file /: [Errno 13] Permission denied: '/'
 2024-10-22 19:19:35,686 - root - INFO - greet
 2024-10-22 19:19:35,702 - root - INFO - Displayed current time: 2024-10-22 19:19:35
+2024-10-22 19:31:19,296 - root - INFO - Logging configured.
+2024-10-22 19:31:19,296 - root - INFO - Environment variables loaded.
+2024-10-22 19:31:19,313 - root - INFO - Logging configured.
+2024-10-22 19:31:19,313 - root - INFO - Environment variables loaded.
+2024-10-22 19:31:19,313 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:31:19,313 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:31:19,313 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:31:19,313 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x000002266E979100>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x000002264E69B770>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x000002266E978E90>, 'No of Arguments is -1']}
+2024-10-22 19:31:19,340 - root - INFO - Calculator REPL started.
+2024-10-22 19:31:19,340 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:31:19,340 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:31:19,340 - root - INFO - Exiting the calculator.
+2024-10-22 19:31:19,353 - root - INFO - Logging configured.
+2024-10-22 19:31:19,353 - root - INFO - Environment variables loaded.
+2024-10-22 19:31:19,353 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:31:19,353 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:31:19,353 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:31:19,353 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x000002266E9786B0>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x000002266E7C8F80>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x000002266E7CA450>, 'No of Arguments is -1']}
+2024-10-22 19:31:19,361 - root - INFO - Calculator REPL started.
+2024-10-22 19:31:19,361 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:31:19,361 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:31:19,361 - root - ERROR - No such command: unknown_command unknown_command
+2024-10-22 19:31:19,372 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,380 - root - INFO - Added 2 + 3 = 5
+2024-10-22 19:31:19,382 - root - INFO - Added -1 + 1 = 0
+2024-10-22 19:31:19,382 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,382 - root - INFO - Subtracted 5 - 3 = 2
+2024-10-22 19:31:19,382 - root - INFO - Subtracted -3 - -2 = -1
+2024-10-22 19:31:19,399 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,403 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:31:19,403 - root - INFO - Multiplied 0 * 10 = 0
+2024-10-22 19:31:19,403 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,412 - root - INFO - Divided 10 / 2 = 5.0
+2024-10-22 19:31:19,416 - root - INFO - Divided -10 / 5 = -2.0
+2024-10-22 19:31:19,419 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,423 - root - ERROR - Division by zero attempted.
+2024-10-22 19:31:19,428 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,429 - root - INFO - Added 1 + 2 = 3
+2024-10-22 19:31:19,434 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:31:19,436 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,436 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:31:19,436 - root - INFO - History cleared.
+2024-10-22 19:31:19,444 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,444 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:31:19,450 - root - INFO - Added 2 + 2 = 4
+2024-10-22 19:31:19,450 - root - INFO - Deleted record: Added 2 + 2 = 4
+2024-10-22 19:31:19,450 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,460 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:31:19,461 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:31:19,465 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,466 - root - INFO - Added 5 + 5 = 10
+2024-10-22 19:31:19,469 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,469 - root - INFO - History loaded from 'calculation_history.csv'.
+2024-10-22 19:31:19,478 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,480 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,486 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,486 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,494 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,502 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,503 - root - INFO - History cleared.
+2024-10-22 19:31:19,503 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,511 - root - INFO - Deleted record: Delete Me
+2024-10-22 19:31:19,516 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:19,518 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:31:19,528 - root - INFO - Title | Author
+2024-10-22 19:31:19,533 - root - INFO - The Great Gatsby | F. Scott Fitzgerald
+2024-10-22 19:31:19,534 - root - INFO - 1984 | George Orwell
+2024-10-22 19:31:19,534 - root - INFO - Displayed data from CSV file: C:\Users\jallu\AppData\Local\Temp\pytest-of-jallu\pytest-8\test_data_plugin_execute_succe0\books.csv
+2024-10-22 19:31:19,630 - root - ERROR - File not found: invalid/path/to/books.csv
+2024-10-22 19:31:19,645 - root - ERROR - Error reading CSV file /: [Errno 13] Permission denied: '/'
+2024-10-22 19:31:19,750 - root - INFO - Displayed current time: 2024-10-22 19:31:19
+2024-10-22 19:31:37,921 - root - INFO - Logging configured.
+2024-10-22 19:31:37,921 - root - INFO - Environment variables loaded.
+2024-10-22 19:31:37,938 - root - INFO - Logging configured.
+2024-10-22 19:31:37,938 - root - INFO - Environment variables loaded.
+2024-10-22 19:31:37,938 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:31:37,938 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:31:37,938 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:31:37,938 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x00000196741D4920>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x00000196741D47A0>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x00000196741D46B0>, 'No of Arguments is -1']}
+2024-10-22 19:31:37,938 - root - INFO - Calculator REPL started.
+2024-10-22 19:31:37,938 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:31:37,938 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:31:37,938 - root - INFO - Exiting the calculator.
+2024-10-22 19:31:37,946 - root - INFO - Logging configured.
+2024-10-22 19:31:37,946 - root - INFO - Environment variables loaded.
+2024-10-22 19:31:37,946 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:31:37,954 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:31:37,954 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:31:37,954 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x0000019653ECAC90>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x0000019651651E20>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x000001967419FFE0>, 'No of Arguments is -1']}
+2024-10-22 19:31:37,954 - root - INFO - Calculator REPL started.
+2024-10-22 19:31:37,954 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:31:37,954 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:31:37,954 - root - ERROR - No such command: unknown_command unknown_command
+2024-10-22 19:31:37,963 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:37,975 - root - INFO - Added 2 + 3 = 5
+2024-10-22 19:31:37,975 - root - INFO - Added -1 + 1 = 0
+2024-10-22 19:31:37,980 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:37,988 - root - INFO - Subtracted 5 - 3 = 2
+2024-10-22 19:31:37,988 - root - INFO - Subtracted -3 - -2 = -1
+2024-10-22 19:31:38,005 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,008 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:31:38,008 - root - INFO - Multiplied 0 * 10 = 0
+2024-10-22 19:31:38,013 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,013 - root - INFO - Divided 10 / 2 = 5.0
+2024-10-22 19:31:38,022 - root - INFO - Divided -10 / 5 = -2.0
+2024-10-22 19:31:38,026 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,026 - root - ERROR - Division by zero attempted.
+2024-10-22 19:31:38,026 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,026 - root - INFO - Added 1 + 2 = 3
+2024-10-22 19:31:38,026 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:31:38,040 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,040 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:31:38,040 - root - INFO - History cleared.
+2024-10-22 19:31:38,047 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,047 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:31:38,047 - root - INFO - Added 2 + 2 = 4
+2024-10-22 19:31:38,047 - root - INFO - Deleted record: Added 2 + 2 = 4
+2024-10-22 19:31:38,055 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,059 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:31:38,059 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:31:38,063 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,063 - root - INFO - Added 5 + 5 = 10
+2024-10-22 19:31:38,063 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,063 - root - INFO - History loaded from 'calculation_history.csv'.
+2024-10-22 19:31:38,072 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,076 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,076 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,076 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,088 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,095 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,095 - root - INFO - History cleared.
+2024-10-22 19:31:38,095 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,095 - root - INFO - Deleted record: Delete Me
+2024-10-22 19:31:38,107 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:31:38,107 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:31:38,145 - root - INFO - Title | Author
+2024-10-22 19:31:38,145 - root - INFO - The Great Gatsby | F. Scott Fitzgerald
+2024-10-22 19:31:38,153 - root - INFO - 1984 | George Orwell
+2024-10-22 19:31:38,155 - root - INFO - Displayed data from CSV file: C:\Users\jallu\AppData\Local\Temp\pytest-of-jallu\pytest-9\test_data_plugin_execute_succe0\books.csv
+2024-10-22 19:31:38,248 - root - ERROR - File not found: invalid/path/to/books.csv
+2024-10-22 19:31:38,248 - root - ERROR - Error reading CSV file /: [Errno 13] Permission denied: '/'
+2024-10-22 19:31:38,360 - root - INFO - Displayed current time: 2024-10-22 19:31:38
+2024-10-22 19:32:17,608 - root - INFO - Logging configured.
+2024-10-22 19:32:17,608 - root - INFO - Environment variables loaded.
+2024-10-22 19:32:17,608 - root - INFO - Logging configured.
+2024-10-22 19:32:17,608 - root - INFO - Environment variables loaded.
+2024-10-22 19:32:17,608 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:32:17,616 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:32:17,616 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:32:17,616 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x0000026E6D9B4A70>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x0000026E6D9B4B90>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x0000026E6D9B4980>, 'No of Arguments is -1']}
+2024-10-22 19:32:17,641 - root - INFO - Calculator REPL started.
+2024-10-22 19:32:17,641 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:32:17,641 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:32:17,641 - root - INFO - Exiting the calculator.
+2024-10-22 19:32:17,641 - root - INFO - Logging configured.
+2024-10-22 19:32:17,641 - root - INFO - Environment variables loaded.
+2024-10-22 19:32:17,641 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:32:17,641 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:32:17,641 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:32:17,641 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x0000026E4D6B3860>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x0000026E4D6B3FB0>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x0000026E6BBCB560>, 'No of Arguments is -1']}
+2024-10-22 19:32:17,656 - root - INFO - Calculator REPL started.
+2024-10-22 19:32:17,656 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:32:17,656 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:32:17,657 - root - ERROR - No such command: unknown_command unknown_command
+2024-10-22 19:32:17,662 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,673 - root - INFO - Added 2 + 3 = 5
+2024-10-22 19:32:17,673 - root - INFO - Added -1 + 1 = 0
+2024-10-22 19:32:17,679 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,679 - root - INFO - Subtracted 5 - 3 = 2
+2024-10-22 19:32:17,689 - root - INFO - Subtracted -3 - -2 = -1
+2024-10-22 19:32:17,689 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,694 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:32:17,694 - root - INFO - Multiplied 0 * 10 = 0
+2024-10-22 19:32:17,694 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,694 - root - INFO - Divided 10 / 2 = 5.0
+2024-10-22 19:32:17,705 - root - INFO - Divided -10 / 5 = -2.0
+2024-10-22 19:32:17,708 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,712 - root - ERROR - Division by zero attempted.
+2024-10-22 19:32:17,712 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,721 - root - INFO - Added 1 + 2 = 3
+2024-10-22 19:32:17,722 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:32:17,728 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,728 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:32:17,728 - root - INFO - History cleared.
+2024-10-22 19:32:17,738 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,738 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:32:17,738 - root - INFO - Added 2 + 2 = 4
+2024-10-22 19:32:17,738 - root - INFO - Deleted record: Added 2 + 2 = 4
+2024-10-22 19:32:17,745 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,745 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:32:17,753 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:32:17,753 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,758 - root - INFO - Added 5 + 5 = 10
+2024-10-22 19:32:17,763 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,763 - root - INFO - History loaded from 'calculation_history.csv'.
+2024-10-22 19:32:17,771 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,772 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,778 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,778 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,787 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,787 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,794 - root - INFO - History cleared.
+2024-10-22 19:32:17,797 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,802 - root - INFO - Deleted record: Delete Me
+2024-10-22 19:32:17,802 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:32:17,808 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:32:17,846 - root - INFO - Title | Author
+2024-10-22 19:32:17,858 - root - INFO - The Great Gatsby | F. Scott Fitzgerald
+2024-10-22 19:32:17,858 - root - INFO - 1984 | George Orwell
+2024-10-22 19:32:17,866 - root - INFO - Displayed data from CSV file: C:\Users\jallu\AppData\Local\Temp\pytest-of-jallu\pytest-10\test_data_plugin_execute_succe0\books.csv
+2024-10-22 19:32:17,947 - root - ERROR - File not found: invalid/path/to/books.csv
+2024-10-22 19:32:17,947 - root - ERROR - Error reading CSV file /: [Errno 13] Permission denied: '/'
+2024-10-22 19:32:18,065 - root - INFO - Displayed current time: 2024-10-22 19:32:18
+2024-10-22 19:33:01,743 - root - INFO - Logging configured.
+2024-10-22 19:33:01,743 - root - INFO - Environment variables loaded.
+2024-10-22 19:33:01,751 - root - INFO - Logging configured.
+2024-10-22 19:33:01,751 - root - INFO - Environment variables loaded.
+2024-10-22 19:33:01,751 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:33:01,751 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:33:01,751 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:33:01,751 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x00000189B3543E30>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x00000189B39F4F80>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x00000189B39F5070>, 'No of Arguments is -1']}
+2024-10-22 19:33:01,751 - root - INFO - Calculator REPL started.
+2024-10-22 19:33:01,751 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:33:01,751 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:33:01,751 - root - INFO - Exiting the calculator.
+2024-10-22 19:33:01,751 - root - INFO - Logging configured.
+2024-10-22 19:33:01,759 - root - INFO - Environment variables loaded.
+2024-10-22 19:33:01,759 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:33:01,759 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:33:01,759 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:33:01,759 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x00000189B38615E0>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x00000189B3981550>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x00000189B3980DA0>, 'No of Arguments is -1']}
+2024-10-22 19:33:01,759 - root - INFO - Calculator REPL started.
+2024-10-22 19:33:01,759 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:33:01,759 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:33:01,759 - root - ERROR - No such command: unknown_command unknown_command
+2024-10-22 19:33:01,759 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,767 - root - INFO - Added 2 + 3 = 5
+2024-10-22 19:33:01,767 - root - INFO - Added -1 + 1 = 0
+2024-10-22 19:33:01,777 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,781 - root - INFO - Subtracted 5 - 3 = 2
+2024-10-22 19:33:01,783 - root - INFO - Subtracted -3 - -2 = -1
+2024-10-22 19:33:01,783 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,783 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:33:01,783 - root - INFO - Multiplied 0 * 10 = 0
+2024-10-22 19:33:01,793 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,794 - root - INFO - Divided 10 / 2 = 5.0
+2024-10-22 19:33:01,794 - root - INFO - Divided -10 / 5 = -2.0
+2024-10-22 19:33:01,794 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,794 - root - ERROR - Division by zero attempted.
+2024-10-22 19:33:01,794 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,794 - root - INFO - Added 1 + 2 = 3
+2024-10-22 19:33:01,794 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:33:01,808 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,809 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:33:01,812 - root - INFO - History cleared.
+2024-10-22 19:33:01,817 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,817 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:33:01,817 - root - INFO - Added 2 + 2 = 4
+2024-10-22 19:33:01,817 - root - INFO - Deleted record: Added 2 + 2 = 4
+2024-10-22 19:33:01,817 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,817 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:33:01,817 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:33:01,827 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,827 - root - INFO - Added 5 + 5 = 10
+2024-10-22 19:33:01,827 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,827 - root - INFO - History loaded from 'calculation_history.csv'.
+2024-10-22 19:33:01,827 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,842 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,846 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,851 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,851 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,851 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,859 - root - INFO - History cleared.
+2024-10-22 19:33:01,863 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,863 - root - INFO - Deleted record: Delete Me
+2024-10-22 19:33:01,863 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:01,863 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:33:01,883 - root - INFO - Title | Author
+2024-10-22 19:33:01,883 - root - INFO - The Great Gatsby | F. Scott Fitzgerald
+2024-10-22 19:33:01,883 - root - INFO - 1984 | George Orwell
+2024-10-22 19:33:01,883 - root - INFO - Displayed data from CSV file: C:\Users\jallu\AppData\Local\Temp\pytest-of-jallu\pytest-11\test_data_plugin_execute_succe0\books.csv
+2024-10-22 19:33:01,982 - root - ERROR - File not found: invalid/path/to/books.csv
+2024-10-22 19:33:01,999 - root - ERROR - Error reading CSV file /: [Errno 13] Permission denied: '/'
+2024-10-22 19:33:02,109 - root - INFO - Displayed current time: 2024-10-22 19:33:02
+2024-10-22 19:33:46,778 - root - INFO - Logging configured.
+2024-10-22 19:33:46,778 - root - INFO - Environment variables loaded.
+2024-10-22 19:33:46,778 - root - INFO - Logging configured.
+2024-10-22 19:33:46,778 - root - INFO - Environment variables loaded.
+2024-10-22 19:33:46,794 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:33:46,794 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:33:46,794 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:33:46,794 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x000002357AC8FB60>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x0000023558170170>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x000002355A99AFC0>, 'No of Arguments is -1']}
+2024-10-22 19:33:46,821 - root - INFO - Calculator REPL started.
+2024-10-22 19:33:46,821 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:33:46,821 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:33:46,821 - root - INFO - Exiting the calculator.
+2024-10-22 19:33:46,833 - root - INFO - Logging configured.
+2024-10-22 19:33:46,833 - root - INFO - Environment variables loaded.
+2024-10-22 19:33:46,833 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:33:46,833 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:33:46,833 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:33:46,833 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x000002357911A4B0>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x000002355A99B4D0>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x000002355A99BC50>, 'No of Arguments is -1']}
+2024-10-22 19:33:46,833 - root - INFO - Calculator REPL started.
+2024-10-22 19:33:46,833 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:33:46,833 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:33:46,833 - root - ERROR - No such command: unknown_command unknown_command
+2024-10-22 19:33:46,846 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:46,846 - root - INFO - Added 2 + 3 = 5
+2024-10-22 19:33:46,846 - root - INFO - Added -1 + 1 = 0
+2024-10-22 19:33:46,867 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:46,867 - root - INFO - Subtracted 5 - 3 = 2
+2024-10-22 19:33:46,867 - root - INFO - Subtracted -3 - -2 = -1
+2024-10-22 19:33:46,877 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:46,887 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:33:46,887 - root - INFO - Multiplied 0 * 10 = 0
+2024-10-22 19:33:46,894 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:46,900 - root - INFO - Divided 10 / 2 = 5.0
+2024-10-22 19:33:46,904 - root - INFO - Divided -10 / 5 = -2.0
+2024-10-22 19:33:46,906 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:46,915 - root - ERROR - Division by zero attempted.
+2024-10-22 19:33:46,922 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:46,922 - root - INFO - Added 1 + 2 = 3
+2024-10-22 19:33:46,930 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:33:46,938 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:46,938 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:33:46,938 - root - INFO - History cleared.
+2024-10-22 19:33:46,951 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:46,955 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:33:46,955 - root - INFO - Added 2 + 2 = 4
+2024-10-22 19:33:46,955 - root - INFO - Deleted record: Added 2 + 2 = 4
+2024-10-22 19:33:46,963 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:46,965 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:33:46,965 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:33:46,965 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:46,965 - root - INFO - Added 5 + 5 = 10
+2024-10-22 19:33:46,977 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:46,979 - root - INFO - History loaded from 'calculation_history.csv'.
+2024-10-22 19:33:46,986 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:46,986 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:46,994 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:46,998 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:47,002 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:47,002 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:47,002 - root - INFO - History cleared.
+2024-10-22 19:33:47,011 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:47,015 - root - INFO - Deleted record: Delete Me
+2024-10-22 19:33:47,015 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:33:47,015 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:33:47,052 - root - INFO - Title | Author
+2024-10-22 19:33:47,061 - root - INFO - The Great Gatsby | F. Scott Fitzgerald
+2024-10-22 19:33:47,062 - root - INFO - 1984 | George Orwell
+2024-10-22 19:33:47,062 - root - INFO - Displayed data from CSV file: C:\Users\jallu\AppData\Local\Temp\pytest-of-jallu\pytest-12\test_data_plugin_execute_succe0\books.csv
+2024-10-22 19:33:47,181 - root - ERROR - File not found: invalid/path/to/books.csv
+2024-10-22 19:33:47,222 - root - ERROR - Error reading CSV file /: [Errno 13] Permission denied: '/'
+2024-10-22 19:33:47,318 - root - INFO - Displayed current time: 2024-10-22 19:33:47
+2024-10-22 19:34:52,656 - root - INFO - Logging configured.
+2024-10-22 19:34:52,656 - root - INFO - Environment variables loaded.
+2024-10-22 19:34:52,671 - root - INFO - Logging configured.
+2024-10-22 19:34:52,671 - root - INFO - Environment variables loaded.
+2024-10-22 19:34:52,671 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:34:52,671 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:34:52,671 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:34:52,671 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x0000018C21FEFC20>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x0000018C7FDC1E20>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x0000018C21B66480>, 'No of Arguments is -1']}
+2024-10-22 19:34:52,704 - root - INFO - Calculator REPL started.
+2024-10-22 19:34:52,705 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:34:52,705 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:34:52,705 - root - INFO - Exiting the calculator.
+2024-10-22 19:34:52,712 - root - INFO - Logging configured.
+2024-10-22 19:34:52,712 - root - INFO - Environment variables loaded.
+2024-10-22 19:34:52,712 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:34:52,712 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:34:52,712 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:34:52,712 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x0000018C21FEFEF0>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x0000018C21FEEF60>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x0000018C7F4D1C70>, 'No of Arguments is -1']}
+2024-10-22 19:34:52,712 - root - INFO - Calculator REPL started.
+2024-10-22 19:34:52,712 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:34:52,712 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:34:52,712 - root - ERROR - No such command: unknown_command unknown_command
+2024-10-22 19:34:52,723 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,731 - root - INFO - Added 2 + 3 = 5
+2024-10-22 19:34:52,738 - root - INFO - Added -1 + 1 = 0
+2024-10-22 19:34:52,746 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,746 - root - INFO - Subtracted 5 - 3 = 2
+2024-10-22 19:34:52,746 - root - INFO - Subtracted -3 - -2 = -1
+2024-10-22 19:34:52,746 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,755 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:34:52,755 - root - INFO - Multiplied 0 * 10 = 0
+2024-10-22 19:34:52,764 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,764 - root - INFO - Divided 10 / 2 = 5.0
+2024-10-22 19:34:52,764 - root - INFO - Divided -10 / 5 = -2.0
+2024-10-22 19:34:52,764 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,771 - root - ERROR - Division by zero attempted.
+2024-10-22 19:34:52,776 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,780 - root - INFO - Added 1 + 2 = 3
+2024-10-22 19:34:52,780 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:34:52,780 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,780 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:34:52,780 - root - INFO - History cleared.
+2024-10-22 19:34:52,790 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,790 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:34:52,793 - root - INFO - Added 2 + 2 = 4
+2024-10-22 19:34:52,793 - root - INFO - Deleted record: Added 2 + 2 = 4
+2024-10-22 19:34:52,796 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,796 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:34:52,796 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:34:52,805 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,805 - root - INFO - Added 5 + 5 = 10
+2024-10-22 19:34:52,809 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,813 - root - INFO - History loaded from 'calculation_history.csv'.
+2024-10-22 19:34:52,813 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,823 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,826 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,826 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,826 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,838 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,843 - root - INFO - History cleared.
+2024-10-22 19:34:52,843 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,843 - root - INFO - Deleted record: Delete Me
+2024-10-22 19:34:52,853 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:34:52,855 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:34:52,893 - root - INFO - Title | Author
+2024-10-22 19:34:52,893 - root - INFO - The Great Gatsby | F. Scott Fitzgerald
+2024-10-22 19:34:52,893 - root - INFO - 1984 | George Orwell
+2024-10-22 19:34:52,893 - root - INFO - Displayed data from CSV file: C:\Users\jallu\AppData\Local\Temp\pytest-of-jallu\pytest-13\test_data_plugin_execute_succe0\books.csv
+2024-10-22 19:34:53,021 - root - ERROR - File not found: invalid/path/to/books.csv
+2024-10-22 19:34:53,027 - root - ERROR - Error reading CSV file /: [Errno 13] Permission denied: '/'
+2024-10-22 19:34:53,122 - root - INFO - Displayed current time: 2024-10-22 19:34:53
+2024-10-22 19:35:39,090 - root - INFO - Logging configured.
+2024-10-22 19:35:39,090 - root - INFO - Environment variables loaded.
+2024-10-22 19:35:39,090 - root - INFO - Logging configured.
+2024-10-22 19:35:39,090 - root - INFO - Environment variables loaded.
+2024-10-22 19:35:39,090 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:35:39,090 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:35:39,090 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:35:39,090 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x000002945EEBC470>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x000002943EC4ADB0>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x000002945EDD0AA0>, 'No of Arguments is -1']}
+2024-10-22 19:35:39,126 - root - INFO - Calculator REPL started.
+2024-10-22 19:35:39,126 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:35:39,126 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:35:39,126 - root - INFO - Exiting the calculator.
+2024-10-22 19:35:39,126 - root - INFO - Logging configured.
+2024-10-22 19:35:39,126 - root - INFO - Environment variables loaded.
+2024-10-22 19:35:39,126 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:35:39,135 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:35:39,135 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:35:39,135 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x000002943C434DD0>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x000002943C434D70>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x000002945D1D5310>, 'No of Arguments is -1']}
+2024-10-22 19:35:39,136 - root - INFO - Calculator REPL started.
+2024-10-22 19:35:39,136 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:35:39,136 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:35:39,136 - root - ERROR - No such command: unknown_command unknown_command
+2024-10-22 19:35:39,139 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,139 - root - INFO - Added 2 + 3 = 5
+2024-10-22 19:35:39,139 - root - INFO - Added -1 + 1 = 0
+2024-10-22 19:35:39,156 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,160 - root - INFO - Subtracted 5 - 3 = 2
+2024-10-22 19:35:39,160 - root - INFO - Subtracted -3 - -2 = -1
+2024-10-22 19:35:39,168 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,168 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:35:39,173 - root - INFO - Multiplied 0 * 10 = 0
+2024-10-22 19:35:39,176 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,176 - root - INFO - Divided 10 / 2 = 5.0
+2024-10-22 19:35:39,176 - root - INFO - Divided -10 / 5 = -2.0
+2024-10-22 19:35:39,176 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,176 - root - ERROR - Division by zero attempted.
+2024-10-22 19:35:39,176 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,189 - root - INFO - Added 1 + 2 = 3
+2024-10-22 19:35:39,189 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:35:39,189 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,189 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:35:39,189 - root - INFO - History cleared.
+2024-10-22 19:35:39,189 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,205 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:35:39,205 - root - INFO - Added 2 + 2 = 4
+2024-10-22 19:35:39,211 - root - INFO - Deleted record: Added 2 + 2 = 4
+2024-10-22 19:35:39,213 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,213 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:35:39,213 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:35:39,224 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,224 - root - INFO - Added 5 + 5 = 10
+2024-10-22 19:35:39,224 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,230 - root - INFO - History loaded from 'calculation_history.csv'.
+2024-10-22 19:35:39,230 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,240 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,243 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,248 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,250 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,255 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,257 - root - INFO - History cleared.
+2024-10-22 19:35:39,260 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,260 - root - INFO - Deleted record: Delete Me
+2024-10-22 19:35:39,260 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:35:39,260 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:35:39,304 - root - INFO - Title | Author
+2024-10-22 19:35:39,304 - root - INFO - The Great Gatsby | F. Scott Fitzgerald
+2024-10-22 19:35:39,313 - root - INFO - 1984 | George Orwell
+2024-10-22 19:35:39,313 - root - INFO - Displayed data from CSV file: C:\Users\jallu\AppData\Local\Temp\pytest-of-jallu\pytest-14\test_data_plugin_execute_succe0\books.csv
+2024-10-22 19:35:39,439 - root - ERROR - File not found: invalid/path/to/books.csv
+2024-10-22 19:35:39,481 - root - ERROR - Error reading CSV file /: [Errno 13] Permission denied: '/'
+2024-10-22 19:35:39,499 - root - INFO - Arguments: Hello, World
+2024-10-22 19:35:39,499 - root - INFO - greet
+2024-10-22 19:35:39,512 - root - INFO - Displayed current time: 2024-10-22 19:35:39
+2024-10-22 19:36:11,717 - root - INFO - Logging configured.
+2024-10-22 19:36:11,719 - root - INFO - Environment variables loaded.
+2024-10-22 19:36:11,719 - root - INFO - Logging configured.
+2024-10-22 19:36:11,719 - root - INFO - Environment variables loaded.
+2024-10-22 19:36:11,728 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:36:11,728 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:36:11,728 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:36:11,728 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x0000023BCA41FA70>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x0000023BCA41FC80>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x0000023BC85464B0>, 'No of Arguments is -1']}
+2024-10-22 19:36:11,752 - root - INFO - Calculator REPL started.
+2024-10-22 19:36:11,752 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:36:11,752 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:36:11,752 - root - INFO - Exiting the calculator.
+2024-10-22 19:36:11,767 - root - INFO - Logging configured.
+2024-10-22 19:36:11,770 - root - INFO - Environment variables loaded.
+2024-10-22 19:36:11,772 - root - INFO - Plugin 'DataPlugin' registered successfully.
+2024-10-22 19:36:11,772 - root - INFO - Plugin 'GreetPlugin' registered successfully.
+2024-10-22 19:36:11,772 - root - INFO - Plugin 'TimePlugin' registered successfully.
+2024-10-22 19:36:11,772 - root - INFO - {'data': [<plugins.data.DataPlugin object at 0x0000023BCA289B20>, 'No of Arguments is -1'], 'greet': [<plugins.greet.GreetPlugin object at 0x0000023BCA41ED80>, 'No of Arguments is 1 & Arguments are [<Parameter "arg2">]'], 'time': [<plugins.time.TimePlugin object at 0x0000023BCA41FC20>, 'No of Arguments is -1']}
+2024-10-22 19:36:11,772 - root - INFO - Calculator REPL started.
+2024-10-22 19:36:11,775 - root - INFO - Type 'exit' to exit.
+2024-10-22 19:36:11,776 - root - INFO - Available history commands: load_history, save_history, clear_history, delete_history_record <index>.
+2024-10-22 19:36:11,776 - root - ERROR - No such command: unknown_command unknown_command
+2024-10-22 19:36:11,786 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,801 - root - INFO - Added 2 + 3 = 5
+2024-10-22 19:36:11,802 - root - INFO - Added -1 + 1 = 0
+2024-10-22 19:36:11,808 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,811 - root - INFO - Subtracted 5 - 3 = 2
+2024-10-22 19:36:11,811 - root - INFO - Subtracted -3 - -2 = -1
+2024-10-22 19:36:11,815 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,815 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:36:11,815 - root - INFO - Multiplied 0 * 10 = 0
+2024-10-22 19:36:11,825 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,828 - root - INFO - Divided 10 / 2 = 5.0
+2024-10-22 19:36:11,829 - root - INFO - Divided -10 / 5 = -2.0
+2024-10-22 19:36:11,829 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,829 - root - ERROR - Division by zero attempted.
+2024-10-22 19:36:11,829 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,829 - root - INFO - Added 1 + 2 = 3
+2024-10-22 19:36:11,829 - root - INFO - Multiplied 3 * 4 = 12
+2024-10-22 19:36:11,841 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,841 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:36:11,848 - root - INFO - History cleared.
+2024-10-22 19:36:11,851 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,851 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:36:11,851 - root - INFO - Added 2 + 2 = 4
+2024-10-22 19:36:11,851 - root - INFO - Deleted record: Added 2 + 2 = 4
+2024-10-22 19:36:11,857 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,861 - root - INFO - Added 1 + 1 = 2
+2024-10-22 19:36:11,861 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:36:11,866 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,866 - root - INFO - Added 5 + 5 = 10
+2024-10-22 19:36:11,866 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,874 - root - INFO - History loaded from 'calculation_history.csv'.
+2024-10-22 19:36:11,878 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,883 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,883 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,890 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,895 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,900 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,900 - root - INFO - History cleared.
+2024-10-22 19:36:11,908 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,908 - root - INFO - Deleted record: Delete Me
+2024-10-22 19:36:11,908 - root - INFO - History saved to 'calculation_history.csv'.
+2024-10-22 19:36:11,915 - root - ERROR - Invalid index provided for deletion.
+2024-10-22 19:36:11,953 - root - INFO - Displayed data from CSV file: C:\Users\jallu\AppData\Local\Temp\pytest-of-jallu\pytest-15\test_data_plugin_execute_succe0\books.csv
+2024-10-22 19:36:11,964 - root - ERROR - File not found: invalid/path/to/books.csv
+2024-10-22 19:36:11,964 - root - ERROR - Error reading CSV file /: [Errno 13] Permission denied: '/'
+2024-10-22 19:36:11,986 - root - INFO - Arguments: Hello, World
+2024-10-22 19:36:11,986 - root - INFO - greet
+2024-10-22 19:36:12,003 - root - INFO - Displayed current time: 2024-10-22 19:36:12
