@@ -23,11 +23,11 @@ class DataPlugin(Command):
             with open(filename, mode='r', newline='', encoding='utf-8') as csvfile:
                 reader = csv.reader(csvfile)
                 headers = next(reader)  # Get the headers
-                print(f"{' | '.join(headers)}")  # Print headers
+                logging.info(f"{' | '.join(headers)}")  # Print headers
 
                 # Print the rows
                 for row in reader:
-                    print(f"{' | '.join(row)}")
+                    logging.info(f"{' | '.join(row)}")
                 
                 logging.info("Displayed data from CSV file: %s", filename)
         except FileNotFoundError:

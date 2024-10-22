@@ -50,7 +50,7 @@ class App:
                     sys.exit(0)
 
                 if cmd_input.lower() == 'history':
-                    print("Calculation History:")
+                    logging.info("Calculation History:")
                     print(self.calculator.show_history())
                     break                
                 if cmd_input.lower() == 'load_history':
@@ -77,7 +77,7 @@ class App:
                         print("Error: Please provide a valid index to delete.")
                     continue
                 if cmd_input.lower() == 'menu':
-                    print("Available commands:")
+                    logging.info("Available commands:")
                     print(self.command_handler.list_plugins())
                 # Split the command and its arguments
                 cmd_parts = cmd_input.split()
@@ -138,8 +138,8 @@ class App:
     def start(self):   
         """Initialize the calculator, load plugins, and start the REPL.""" 
         self.command_handler.load_plugins("plugins")
-        print(self.command_handler.commands)
+        logging.info(self.command_handler.commands)
         logging.info("Calculator REPL started.")
         logging.info("Type 'exit' to exit.")
-        print("Available history commands: load_history, save_history, clear_history, delete_history_record <index>.")
+        logging.info("Available history commands: load_history, save_history, clear_history, delete_history_record <index>.")
         self.repl()
