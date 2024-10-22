@@ -2,6 +2,7 @@
 import logging
 import os
 import logging.config
+import sys
 from dotenv import load_dotenv  # Third-party import
 from calculator.calculator import Calculator  # First-party import
 from commands import CommandHandler  # First-party import
@@ -46,7 +47,8 @@ class App:
                 if cmd_input.lower() == 'exit':
                     logging.info("Exiting the calculator.")
                     print("Exiting the calculator.")
-                    break
+                    sys.exit(0)
+
                 if cmd_input.lower() == 'history':
                     print("Calculation History:")
                     print(self.calculator.show_history())
@@ -127,8 +129,9 @@ class App:
                         logging.error("Error executing command '%s': %s", operation, e)
                         print(f"Error: Failed to execute '{operation}'. {e}")
 
-                if operation not in self.command_handler.list_plugins() +  ['add', 'subtract', 'multiply', 'divide',"menu"]: 
-                    print("command not found")
+                if operation not in self.command_handler.list_plugins() +  ['add', 'subtract', 'multiply', 'divide',"menu"]:
+                    logging.error(f"No such command: unknown_command {cmd_input}")
+                    sys.exit(1) 
             except Exception as e:
                 logging.error("An unexpected error occurred: %s", e)
                 print(f"Error: An unexpected error occurred: {e}")
