@@ -17,3 +17,5 @@ class TimePlugin(Command):
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         print("Current Time:", current_time)
         logging.info("Displayed current time: %s", current_time)
+# pylint: disable=too-few-public-methods
+# pylint: disable=arguments-differ

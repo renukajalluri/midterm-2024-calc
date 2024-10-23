@@ -51,6 +51,16 @@ python app.py
 - Load history: ``` load_history ```
 - Clear history: ``` clear_history ```
 - Delete history record:``` delete_history_record <index> ```
+- Menu: ``` menu ```
+
+
+# Calculator Class
+
+The Calculator class performs basic arithmetic operations and manages calculation history through the HistoryFacade. Each operation logs the calculation to the history and records it for later retrieval.
+
+# History Management
+
+The HistoryFacade class manages calculation history using a Pandas DataFrame, allowing for adding, saving, loading, and clearing history entries.
 
 # Design Patterns Used:
 1. **Facade Pattern:**: Implemented in the HistoryFacade class to simplify interactions with the history management functionalities. This pattern hides the complexities of the underlying operations (like adding, saving, loading, and clearing history) and provides a simplified interface.
