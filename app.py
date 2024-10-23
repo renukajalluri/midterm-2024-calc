@@ -77,7 +77,7 @@ class App:
                     continue
                 if cmd_input.lower() == 'menu':
                     logging.info("Available commands:")
-                    print(self.command_handler.list_plugins())
+                    logging.info(self.command_handler.list_plugins()+['add', 'subtract', 'multiply', 'divide',"save_history","load_history","delete history_record <index>","clear_history"])
                 # Split the command and its arguments
                 cmd_parts = cmd_input.split()
                 if len(cmd_parts) == 0:
@@ -140,5 +140,6 @@ class App:
         logging.info(self.command_handler.commands)
         logging.info("Calculator REPL started.")
         logging.info("Type 'exit' to exit.")
+        logging.info("Type 'menu' to get available commands.")
         logging.info("Available history commands: load_history, save_history, clear_history, delete_history_record <index>.")
         self.repl()
