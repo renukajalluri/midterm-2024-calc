@@ -44,6 +44,13 @@ python app.py
 2. **Basic commands:**:
 - Add: ``` add 5 3 ```
 - Subtract: ``` subtract 10 4 ```
+- Divide: ``` divide 8 2 ```
+- Exit: ``` exit ```
+- View history: ``` history ```
+- Save history: ``` save_history ```
+- Load history: ``` load_history ```
+- Clear history: ``` clear_history ```
+- Delete history record:``` delete_history_record <index> ```
 
 # Design Patterns Used:
 1. **Facade Pattern:**: Implemented in the HistoryFacade class to simplify interactions with the history management functionalities. This pattern hides the complexities of the underlying operations (like adding, saving, loading, and clearing history) and provides a simplified interface.
